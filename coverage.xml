@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CoverageSession xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Summary numSequencePoints="63" visitedSequencePoints="60" numBranchPoints="16" visitedBranchPoints="14" sequenceCoverage="95.24" branchCoverage="87.5" maxCyclomaticComplexity="3" minCyclomaticComplexity="1" visitedClasses="3" numClasses="3" visitedMethods="13" numMethods="14" />
+  <Modules>
+    <Module skippedDueTo="Filter" hash="D9-A4-43-79-FA-F4-2A-B0-31-3A-20-A1-03-C5-E0-42-94-AB-99-28">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_64\mscorlib\v4.0_4.0.0.0__b77a5c561934e089\mscorlib.dll</ModulePath>
+      <ModuleTime>2018-02-09T03:35:01.1681381Z</ModuleTime>
+      <ModuleName>mscorlib</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="86-E9-3D-3D-7C-09-09-11-61-67-42-C6-1E-4B-75-FF-C4-1C-03-96">
+      <ModulePath>C:\Users\Florian\Entwicklung\Xrm-Fluent-Query\packages\nunit.consolerunner\tools\nunit3-console.exe</ModulePath>
+      <ModuleTime>2018-01-27T10:27:14Z</ModuleTime>
+      <ModuleName>nunit3-console</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="CB-7B-C7-A0-09-0F-BA-F4-8A-02-A9-E9-2A-7B-43-34-93-46-0F-58">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System\v4.0_4.0.0.0__b77a5c561934e089\System.dll</ModulePath>
+      <ModuleTime>2017-09-29T13:43:06.7717063Z</ModuleTime>
+      <ModuleName>System</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="C1-08-CD-F2-59-9C-E6-0B-62-F9-09-43-74-9F-8D-57-9D-A9-93-31">
+      <ModulePath>C:\Users\Florian\Entwicklung\Xrm-Fluent-Query\packages\nunit.consolerunner\tools\nunit.engine.api.dll</ModulePath>
+      <ModuleTime>2018-01-27T10:27:14Z</ModuleTime>
+      <ModuleName>nunit.engine.api</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="95-2A-FF-98-B6-82-8F-7C-F0-AC-3D-56-5A-54-93-7D-3B-32-4F-7B">
+      <ModulePath>C:\Users\Florian\Entwicklung\Xrm-Fluent-Query\packages\nunit.consolerunner\tools\nunit.engine.dll</ModulePath>
+      <ModuleTime>2018-01-27T10:27:14Z</ModuleTime>
+      <ModuleName>nunit.engine</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="95-2A-FF-98-B6-82-8F-7C-F0-AC-3D-56-5A-54-93-7D-3B-32-4F-7B">
+      <ModulePath>C:\Users\Florian\Entwicklung\Xrm-Fluent-Query\packages\nunit.consolerunner\tools\nunit.engine.dll</ModulePath>
+      <ModuleTime>2018-01-27T10:27:14Z</ModuleTime>
+      <ModuleName>nunit.engine</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="58-2A-4C-0C-25-69-3C-E5-E8-8F-0E-35-DB-19-D0-78-0E-D1-10-FA">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Xml\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.dll</ModulePath>
+      <ModuleTime>2017-12-22T03:10:39.7166266Z</ModuleTime>
+      <ModuleName>System.Xml</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="DC-F8-A3-B5-3C-D2-A2-92-BD-DE-4F-B9-C1-C6-59-24-2B-D3-FE-39">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_64\System.Web\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Web.dll</ModulePath>
+      <ModuleTime>2018-02-09T03:34:33.7286998Z</ModuleTime>
+      <ModuleName>System.Web</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="95-C2-7F-29-1B-5E-88-C5-62-B1-37-09-E1-F0-97-D4-51-18-8D-2E">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Runtime.Remoting\v4.0_4.0.0.0__b77a5c561934e089\System.Runtime.Remoting.dll</ModulePath>
+      <ModuleTime>2017-09-29T13:43:06.6935754Z</ModuleTime>
+      <ModuleName>System.Runtime.Remoting</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="62-13-DF-BA-4D-76-38-3A-FE-E9-5E-D8-6C-07-CC-1D-A2-DE-73-52">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Configuration\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll</ModulePath>
+      <ModuleTime>2017-09-29T13:43:06.6154445Z</ModuleTime>
+      <ModuleName>System.Configuration</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="8A-2E-8F-D6-9D-39-02-4A-2F-30-FC-06-42-F7-0F-A8-32-69-07-72">
+      <ModulePath>C:\Users\Florian\Entwicklung\Xrm-Fluent-Query\packages\nunit.consolerunner\tools\Mono.Cecil.dll</ModulePath>
+      <ModuleTime>2018-01-27T10:27:14Z</ModuleTime>
+      <ModuleName>Mono.Cecil</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="D9-A4-43-79-FA-F4-2A-B0-31-3A-20-A1-03-C5-E0-42-94-AB-99-28">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_64\mscorlib\v4.0_4.0.0.0__b77a5c561934e089\mscorlib.dll</ModulePath>
+      <ModuleTime>2018-02-09T03:35:01.1681381Z</ModuleTime>
+      <ModuleName>mscorlib</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="23-B3-8E-36-35-0B-BD-20-43-E0-A1-0E-D9-F4-93-5D-15-17-91-15">
+      <ModulePath>C:\Users\Florian\Entwicklung\Xrm-Fluent-Query\packages\nunit.consolerunner\tools\nunit-agent.exe</ModulePath>
+      <ModuleTime>2018-01-27T10:27:14Z</ModuleTime>
+      <ModuleName>nunit-agent</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="C1-08-CD-F2-59-9C-E6-0B-62-F9-09-43-74-9F-8D-57-9D-A9-93-31">
+      <ModulePath>C:\Users\Florian\Entwicklung\Xrm-Fluent-Query\packages\nunit.consolerunner\tools\nunit.engine.api.dll</ModulePath>
+      <ModuleTime>2018-01-27T10:27:14Z</ModuleTime>
+      <ModuleName>nunit.engine.api</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="95-2A-FF-98-B6-82-8F-7C-F0-AC-3D-56-5A-54-93-7D-3B-32-4F-7B">
+      <ModulePath>C:\Users\Florian\Entwicklung\Xrm-Fluent-Query\packages\nunit.consolerunner\tools\nunit.engine.dll</ModulePath>
+      <ModuleTime>2018-01-27T10:27:14Z</ModuleTime>
+      <ModuleName>nunit.engine</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="CB-7B-C7-A0-09-0F-BA-F4-8A-02-A9-E9-2A-7B-43-34-93-46-0F-58">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System\v4.0_4.0.0.0__b77a5c561934e089\System.dll</ModulePath>
+      <ModuleTime>2017-09-29T13:43:06.7717063Z</ModuleTime>
+      <ModuleName>System</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="58-2A-4C-0C-25-69-3C-E5-E8-8F-0E-35-DB-19-D0-78-0E-D1-10-FA">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Xml\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.dll</ModulePath>
+      <ModuleTime>2017-12-22T03:10:39.7166266Z</ModuleTime>
+      <ModuleName>System.Xml</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="DC-F8-A3-B5-3C-D2-A2-92-BD-DE-4F-B9-C1-C6-59-24-2B-D3-FE-39">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_64\System.Web\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Web.dll</ModulePath>
+      <ModuleTime>2018-02-09T03:34:33.7286998Z</ModuleTime>
+      <ModuleName>System.Web</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="95-C2-7F-29-1B-5E-88-C5-62-B1-37-09-E1-F0-97-D4-51-18-8D-2E">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Runtime.Remoting\v4.0_4.0.0.0__b77a5c561934e089\System.Runtime.Remoting.dll</ModulePath>
+      <ModuleTime>2017-09-29T13:43:06.6935754Z</ModuleTime>
+      <ModuleName>System.Runtime.Remoting</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="62-13-DF-BA-4D-76-38-3A-FE-E9-5E-D8-6C-07-CC-1D-A2-DE-73-52">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Configuration\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll</ModulePath>
+      <ModuleTime>2017-09-29T13:43:06.6154445Z</ModuleTime>
+      <ModuleName>System.Configuration</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="8A-2E-8F-D6-9D-39-02-4A-2F-30-FC-06-42-F7-0F-A8-32-69-07-72">
+      <ModulePath>C:\Users\Florian\Entwicklung\Xrm-Fluent-Query\packages\nunit.consolerunner\tools\Mono.Cecil.dll</ModulePath>
+      <ModuleTime>2018-01-27T10:27:14Z</ModuleTime>
+      <ModuleName>Mono.Cecil</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="AF-00-89-8E-23-29-6C-3D-DA-76-42-D2-8F-D5-0D-78-C7-55-E7-F5">
+      <ModulePath>C:\Users\Florian\Entwicklung\Xrm-Fluent-Query\test\nunit.framework.dll</ModulePath>
+      <ModuleTime>2018-03-12T21:58:16Z</ModuleTime>
+      <ModuleName>nunit.framework</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="CB-7B-C7-A0-09-0F-BA-F4-8A-02-A9-E9-2A-7B-43-34-93-46-0F-58">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System\v4.0_4.0.0.0__b77a5c561934e089\System.dll</ModulePath>
+      <ModuleTime>2017-09-29T13:43:06.7717063Z</ModuleTime>
+      <ModuleName>System</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="00-E4-8B-23-28-1E-7A-F6-0F-D2-F5-0F-0B-97-50-BC-55-63-B2-9D">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Core\v4.0_4.0.0.0__b77a5c561934e089\System.Core.dll</ModulePath>
+      <ModuleTime>2018-02-02T03:36:02.9502864Z</ModuleTime>
+      <ModuleName>System.Core</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="DC-F8-A3-B5-3C-D2-A2-92-BD-DE-4F-B9-C1-C6-59-24-2B-D3-FE-39">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_64\System.Web\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Web.dll</ModulePath>
+      <ModuleTime>2018-02-09T03:34:33.7286998Z</ModuleTime>
+      <ModuleName>System.Web</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="06-15-46-E1-2A-34-F8-7A-CD-74-11-8D-1D-C8-9D-56-A1-8C-F3-8B">
+      <ModulePath>C:\Users\Florian\Entwicklung\Xrm-Fluent-Query\test\Xrm.Oss.FluentQuery.Tests.dll</ModulePath>
+      <ModuleTime>2018-04-26T23:20:36.4158205Z</ModuleTime>
+      <ModuleName>Xrm.Oss.FluentQuery.Tests</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="58-2A-4C-0C-25-69-3C-E5-E8-8F-0E-35-DB-19-D0-78-0E-D1-10-FA">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Xml\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.dll</ModulePath>
+      <ModuleTime>2017-12-22T03:10:39.7166266Z</ModuleTime>
+      <ModuleName>System.Xml</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="9C-67-7D-5B-BE-2B-C0-BF-ED-BC-33-56-49-F1-E1-EA-03-48-14-DE">
+      <ModulePath>C:\Users\Florian\Entwicklung\Xrm-Fluent-Query\test\FakeXrmEasy.dll</ModulePath>
+      <ModuleTime>2017-03-30T17:34:04Z</ModuleTime>
+      <ModuleName>FakeXrmEasy</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="9B-E3-D9-29-B0-95-86-9B-CB-E3-56-CE-B8-86-E3-8A-E9-45-C1-A2">
+      <ModulePath>C:\Users\Florian\Entwicklung\Xrm-Fluent-Query\test\Microsoft.Xrm.Sdk.dll</ModulePath>
+      <ModuleTime>2016-12-21T12:48:06Z</ModuleTime>
+      <ModuleName>Microsoft.Xrm.Sdk</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="64-7D-F9-97-16-BD-82-9C-0C-75-48-42-B0-A7-55-86-5B-63-44-3C">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Runtime.Serialization\v4.0_4.0.0.0__b77a5c561934e089\System.Runtime.Serialization.dll</ModulePath>
+      <ModuleTime>2017-12-22T03:10:38.2010062Z</ModuleTime>
+      <ModuleName>System.Runtime.Serialization</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="C3-8A-45-EC-19-F4-C2-05-EB-B5-D7-1B-21-3D-0B-B3-F3-B5-31-EA">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Activities\v4.0_4.0.0.0__31bf3856ad364e35\System.Activities.dll</ModulePath>
+      <ModuleTime>2017-12-22T03:11:12.9067281Z</ModuleTime>
+      <ModuleName>System.Activities</ModuleName>
+      <Classes />
+    </Module>
+    <Module hash="F5-2D-32-7A-1A-8A-4F-BB-A0-54-96-2B-91-BB-71-24-66-D5-20-5E">
+      <Summary numSequencePoints="63" visitedSequencePoints="60" numBranchPoints="16" visitedBranchPoints="14" sequenceCoverage="95.24" branchCoverage="87.5" maxCyclomaticComplexity="3" minCyclomaticComplexity="1" visitedClasses="3" numClasses="3" visitedMethods="13" numMethods="14" />
+      <ModulePath>C:\Users\Florian\Entwicklung\Xrm-Fluent-Query\test\Xrm.Oss.FluentQuery.dll</ModulePath>
+      <ModuleTime>2018-04-26T23:09:14.0967115Z</ModuleTime>
+      <ModuleName>Xrm.Oss.FluentQuery</ModuleName>
+      <Files>
+        <File uid="1" fullPath="C:\Users\Florian\Entwicklung\Xrm-Fluent-Query\src\lib\Xrm.Oss.FluentQuery\FluentQuery.cs" />
+      </Files>
+      <Classes>
+        <Class>
+          <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" />
+          <FullName>&lt;Module&gt;</FullName>
+          <Methods />
+        </Class>
+        <Class>
+          <Summary numSequencePoints="6" visitedSequencePoints="3" numBranchPoints="2" visitedBranchPoints="1" sequenceCoverage="50" branchCoverage="50" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="1" numClasses="1" visitedMethods="1" numMethods="2" />
+          <FullName>Xrm.Oss.FluentQuery.IOrganizationServiceFluentQuery</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="true" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="3" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken>100663297</MetadataToken>
+              <Name>Xrm.Oss.FluentQuery.IFluentQuery`1&lt;T&gt; Xrm.Oss.FluentQuery.IOrganizationServiceFluentQuery::Query(Microsoft.Xrm.Sdk.IOrganizationService,System.String)</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="1" ordinal="0" offset="0" sl="14" sc="9" el="14" ec="10" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="2" ordinal="1" offset="1" sl="15" sc="13" el="15" ec="60" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="3" ordinal="2" offset="11" sl="16" sc="9" el="16" ec="10" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="1" ordinal="0" offset="0" sl="14" sc="9" el="14" ec="10" bec="0" bev="0" fileid="1" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="true" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="3" visitedSequencePoints="3" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663298</MetadataToken>
+              <Name>Xrm.Oss.FluentQuery.IFluentQuery`1&lt;Microsoft.Xrm.Sdk.Entity&gt; Xrm.Oss.FluentQuery.IOrganizationServiceFluentQuery::Query(Microsoft.Xrm.Sdk.IOrganizationService,System.String)</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="8" uspid="4" ordinal="0" offset="0" sl="19" sc="9" el="19" ec="10" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="8" uspid="5" ordinal="1" offset="1" sl="20" sc="13" el="20" ec="65" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="8" uspid="6" ordinal="2" offset="11" sl="21" sc="9" el="21" ec="10" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="8" uspid="4" ordinal="0" offset="0" sl="19" sc="9" el="19" ec="10" bec="0" bev="0" fileid="1" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="55" visitedSequencePoints="55" numBranchPoints="12" visitedBranchPoints="11" sequenceCoverage="100" branchCoverage="91.67" maxCyclomaticComplexity="3" minCyclomaticComplexity="1" visitedClasses="1" numClasses="1" visitedMethods="10" numMethods="10" />
+          <FullName>Xrm.Oss.FluentQuery.FluentQuery`1</FullName>
+          <Methods>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="true" isSetter="false">
+              <Summary numSequencePoints="3" visitedSequencePoints="3" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663310</MetadataToken>
+              <Name>Xrm.Oss.FluentQuery.IFluentQuerySetting`1&lt;T&gt; Xrm.Oss.FluentQuery.FluentQuery`1::get_With()</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="4" uspid="7" ordinal="0" offset="0" sl="73" sc="13" el="73" ec="14" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="4" uspid="8" ordinal="1" offset="1" sl="74" sc="17" el="74" ec="29" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="4" uspid="9" ordinal="2" offset="5" sl="75" sc="13" el="75" ec="14" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="4" uspid="7" ordinal="0" offset="0" sl="73" sc="13" el="73" ec="14" bec="0" bev="0" fileid="1" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="true" isSetter="false">
+              <Summary numSequencePoints="3" visitedSequencePoints="3" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663317</MetadataToken>
+              <Name>Microsoft.Xrm.Sdk.Query.QueryExpression Xrm.Oss.FluentQuery.FluentQuery`1::get_Expression()</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="6" uspid="10" ordinal="0" offset="0" sl="148" sc="13" el="148" ec="14" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="6" uspid="11" ordinal="1" offset="1" sl="149" sc="17" el="149" ec="31" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="6" uspid="12" ordinal="2" offset="10" sl="150" sc="13" el="150" ec="14" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="6" uspid="10" ordinal="0" offset="0" sl="148" sc="13" el="148" ec="14" bec="0" bev="0" fileid="1" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="true" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="5" visitedSequencePoints="5" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663308</MetadataToken>
+              <Name>System.Void Xrm.Oss.FluentQuery.FluentQuery`1::.ctor(System.String,Microsoft.Xrm.Sdk.IOrganizationService)</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="8" uspid="13" ordinal="0" offset="0" sl="47" sc="9" el="47" ec="77" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="8" uspid="14" ordinal="1" offset="7" sl="48" sc="9" el="48" ec="10" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="8" uspid="15" ordinal="2" offset="8" sl="49" sc="13" el="58" ec="15" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="8" uspid="16" ordinal="3" offset="67" sl="60" sc="13" el="60" ec="32" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="8" uspid="17" ordinal="4" offset="74" sl="61" sc="9" el="61" ec="10" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="8" uspid="13" ordinal="0" offset="0" sl="47" sc="9" el="47" ec="77" bec="0" bev="0" fileid="1" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="4" visitedSequencePoints="4" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663309</MetadataToken>
+              <Name>Xrm.Oss.FluentQuery.IFluentQuery`1&lt;T&gt; Xrm.Oss.FluentQuery.FluentQuery`1::IncludeColumns(System.String[])</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="6" uspid="18" ordinal="0" offset="0" sl="64" sc="9" el="64" ec="10" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="6" uspid="19" ordinal="1" offset="1" sl="65" sc="13" el="65" ec="50" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="6" uspid="20" ordinal="2" offset="19" sl="67" sc="13" el="67" ec="25" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="6" uspid="21" ordinal="3" offset="23" sl="68" sc="9" el="68" ec="10" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="6" uspid="18" ordinal="0" offset="0" sl="64" sc="9" el="64" ec="10" bec="0" bev="0" fileid="1" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="4" visitedSequencePoints="4" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663311</MetadataToken>
+              <Name>Xrm.Oss.FluentQuery.IFluentQuery`1&lt;T&gt; Xrm.Oss.FluentQuery.FluentQuery`1::RecordCount(System.Nullable`1&lt;System.Int32&gt;)</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="1" uspid="22" ordinal="0" offset="0" sl="79" sc="9" el="79" ec="10" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="23" ordinal="1" offset="1" sl="80" sc="13" el="80" ec="40" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="24" ordinal="2" offset="14" sl="82" sc="13" el="82" ec="25" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="25" ordinal="3" offset="18" sl="83" sc="9" el="83" ec="10" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="1" uspid="22" ordinal="0" offset="0" sl="79" sc="9" el="79" ec="10" bec="0" bev="0" fileid="1" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="4" visitedSequencePoints="4" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663312</MetadataToken>
+              <Name>Xrm.Oss.FluentQuery.IFluentQuery`1&lt;T&gt; Xrm.Oss.FluentQuery.FluentQuery`1::DatabaseLock(System.Boolean)</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="1" uspid="26" ordinal="0" offset="0" sl="86" sc="9" el="86" ec="10" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="27" ordinal="1" offset="1" sl="87" sc="13" el="87" ec="38" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="28" ordinal="2" offset="17" sl="89" sc="13" el="89" ec="25" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="29" ordinal="3" offset="21" sl="90" sc="9" el="90" ec="10" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="1" uspid="26" ordinal="0" offset="0" sl="86" sc="9" el="86" ec="10" bec="0" bev="0" fileid="1" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="2" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="3" visitedSequencePoints="3" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663313</MetadataToken>
+              <Name>System.Collections.Generic.List`1&lt;T&gt; Xrm.Oss.FluentQuery.FluentQuery`1::Retrieve()</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="1" uspid="30" ordinal="0" offset="0" sl="93" sc="9" el="93" ec="10" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="31" ordinal="1" offset="1" sl="94" sc="13" el="95" ec="27" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="32" ordinal="2" offset="67" sl="96" sc="9" el="96" ec="10" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="1" uspid="30" ordinal="0" offset="0" sl="93" sc="9" el="93" ec="10" bec="0" bev="0" fileid="1" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="3" nPathComplexity="2" sequenceCoverage="100" branchCoverage="66.67" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="21" visitedSequencePoints="21" numBranchPoints="3" visitedBranchPoints="2" sequenceCoverage="100" branchCoverage="66.67" maxCyclomaticComplexity="3" minCyclomaticComplexity="3" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663314</MetadataToken>
+              <Name>System.Collections.Generic.List`1&lt;T&gt; Xrm.Oss.FluentQuery.FluentQuery`1::RetrieveAll()</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="1" uspid="35" ordinal="0" offset="0" sl="99" sc="9" el="99" ec="10" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="36" ordinal="1" offset="1" sl="100" sc="13" el="100" ec="41" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="37" ordinal="2" offset="7" sl="102" sc="13" el="102" ec="65" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="38" ordinal="3" offset="24" sl="103" sc="13" el="103" ec="69" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="39" ordinal="4" offset="41" sl="105" sc="13" el="105" ec="37" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="40" ordinal="5" offset="43" sl="106" sc="13" el="106" ec="49" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="41" ordinal="6" offset="46" sl="107" sc="13" el="107" ec="56" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="42" ordinal="7" offset="49" sl="110" sc="13" el="110" ec="14" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="43" ordinal="8" offset="50" sl="111" sc="17" el="111" ec="57" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="44" ordinal="9" offset="69" sl="112" sc="17" el="112" ec="61" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="45" ordinal="10" offset="88" sl="114" sc="17" el="114" ec="66" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="46" ordinal="11" offset="107" sl="115" sc="17" el="116" ec="31" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="47" ordinal="12" offset="157" sl="118" sc="17" el="118" ec="42" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="48" ordinal="13" offset="166" sl="120" sc="17" el="120" ec="52" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="49" ordinal="14" offset="174" sl="121" sc="17" el="121" ec="30" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="50" ordinal="15" offset="180" sl="122" sc="13" el="122" ec="14" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="51" ordinal="16" offset="181" sl="123" sc="13" el="123" ec="33" bec="2" bev="1" fileid="1" />
+                <SequencePoint vc="1" uspid="52" ordinal="17" offset="191" sl="125" sc="13" el="125" ec="61" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="53" ordinal="18" offset="209" sl="126" sc="13" el="126" ec="65" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="54" ordinal="19" offset="227" sl="128" sc="13" el="128" ec="28" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="55" ordinal="20" offset="232" sl="129" sc="9" el="129" ec="10" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints>
+                <BranchPoint vc="1" uspid="58" ordinal="2" offset="186" sl="123" path="0" offsetend="191" fileid="1" />
+                <BranchPoint vc="0" uspid="59" ordinal="3" offset="186" sl="123" path="1" offsetend="49" fileid="1" />
+              </BranchPoints>
+              <MethodPoint xsi:type="SequencePoint" vc="1" uspid="35" ordinal="0" offset="0" sl="99" sc="9" el="99" ec="10" bec="0" bev="0" fileid="1" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="4" visitedSequencePoints="4" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663315</MetadataToken>
+              <Name>Xrm.Oss.FluentQuery.IFluentQuery`1&lt;T&gt; Xrm.Oss.FluentQuery.FluentQuery`1::UniqueRecords(System.Boolean)</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="1" uspid="60" ordinal="0" offset="0" sl="132" sc="9" el="132" ec="10" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="61" ordinal="1" offset="1" sl="133" sc="13" el="133" ec="36" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="62" ordinal="2" offset="14" sl="135" sc="13" el="135" ec="25" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="63" ordinal="3" offset="18" sl="136" sc="9" el="136" ec="10" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="1" uspid="60" ordinal="0" offset="0" sl="132" sc="9" el="132" ec="10" bec="0" bev="0" fileid="1" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="4" visitedSequencePoints="4" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663316</MetadataToken>
+              <Name>Xrm.Oss.FluentQuery.IFluentQuery`1&lt;T&gt; Xrm.Oss.FluentQuery.FluentQuery`1::PageInfo(Microsoft.Xrm.Sdk.Query.PagingInfo)</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="1" uspid="64" ordinal="0" offset="0" sl="139" sc="9" el="139" ec="10" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="65" ordinal="1" offset="1" sl="140" sc="13" el="140" ec="40" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="66" ordinal="2" offset="14" sl="142" sc="13" el="142" ec="25" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="67" ordinal="3" offset="18" sl="143" sc="9" el="143" ec="10" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="1" uspid="64" ordinal="0" offset="0" sl="139" sc="9" el="139" ec="10" bec="0" bev="0" fileid="1" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="2" visitedSequencePoints="2" numBranchPoints="2" visitedBranchPoints="2" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="1" numClasses="1" visitedMethods="2" numMethods="2" />
+          <FullName>Xrm.Oss.FluentQuery.FluentQuery`1/&lt;&gt;c</FullName>
+          <Methods>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="true" isStatic="true" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" />
+              <MetadataToken>100663318</MetadataToken>
+              <Name>System.Void Xrm.Oss.FluentQuery.FluentQuery`1/&lt;&gt;c::.cctor()</Name>
+              <SequencePoints />
+              <BranchPoints />
+              <MethodPoint vc="1" uspid="68" ordinal="0" offset="0" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="true" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" />
+              <MetadataToken>100663319</MetadataToken>
+              <Name>System.Void Xrm.Oss.FluentQuery.FluentQuery`1/&lt;&gt;c::.ctor()</Name>
+              <SequencePoints />
+              <BranchPoints />
+              <MethodPoint vc="1" uspid="69" ordinal="0" offset="0" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="1" visitedSequencePoints="1" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663320</MetadataToken>
+              <Name>T Xrm.Oss.FluentQuery.FluentQuery`1/&lt;&gt;c::&lt;Retrieve&gt;b__8_0(Microsoft.Xrm.Sdk.Entity)</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="1" uspid="70" ordinal="0" offset="0" sl="94" sc="75" el="94" ec="90" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="1" uspid="70" ordinal="0" offset="0" sl="94" sc="75" el="94" ec="90" bec="0" bev="0" fileid="1" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="1" visitedSequencePoints="1" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663321</MetadataToken>
+              <Name>T Xrm.Oss.FluentQuery.FluentQuery`1/&lt;&gt;c::&lt;RetrieveAll&gt;b__9_0(Microsoft.Xrm.Sdk.Entity)</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="2" uspid="71" ordinal="0" offset="0" sl="115" sc="60" el="115" ec="75" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="2" uspid="71" ordinal="0" offset="0" sl="115" sc="60" el="115" ec="75" bec="0" bev="0" fileid="1" />
+            </Method>
+          </Methods>
+        </Class>
+      </Classes>
+    </Module>
+    <Module skippedDueTo="Filter" hash="8E-AC-5F-74-B4-99-37-90-02-9E-70-3B-A1-DA-82-3F-3D-E3-8C-EF">
+      <ModulePath>C:\Users\Florian\Entwicklung\Xrm-Fluent-Query\test\Microsoft.Xrm.Sdk.Workflow.dll</ModulePath>
+      <ModuleTime>2016-12-21T12:48:10Z</ModuleTime>
+      <ModuleName>Microsoft.Xrm.Sdk.Workflow</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="59-73-B6-E6-C6-F9-65-0F-29-3D-C6-1D-A0-64-5D-E0-54-48-95-CA">
+      <ModulePath>C:\Users\Florian\Entwicklung\Xrm-Fluent-Query\test\Microsoft.Crm.Sdk.Proxy.dll</ModulePath>
+      <ModuleTime>2016-12-21T12:48:06Z</ModuleTime>
+      <ModuleName>Microsoft.Crm.Sdk.Proxy</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="4D-DB-60-0F-4E-E8-7F-52-F6-A0-85-62-A6-2C-23-48-26-AB-42-71">
+      <ModulePath>C:\Users\Florian\Entwicklung\Xrm-Fluent-Query\test\FakeItEasy.dll</ModulePath>
+      <ModuleTime>2015-07-23T15:48:32Z</ModuleTime>
+      <ModuleName>FakeItEasy</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="62-13-DF-BA-4D-76-38-3A-FE-E9-5E-D8-6C-07-CC-1D-A2-DE-73-52">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Configuration\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll</ModulePath>
+      <ModuleTime>2017-09-29T13:43:06.6154445Z</ModuleTime>
+      <ModuleName>System.Configuration</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="B6-A3-82-E5-87-DE-B8-9D-E6-F2-21-7E-99-D0-D0-CA-9B-B6-1F-B3">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\mscorlib.resources\v4.0_4.0.0.0_de_b77a5c561934e089\mscorlib.resources.dll</ModulePath>
+      <ModuleTime>2017-09-30T14:34:32.9580479Z</ModuleTime>
+      <ModuleName>mscorlib.resources</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="">
+      <ModulePath>RefEmit_InMemoryManifestModule</ModulePath>
+      <ModuleTime>0001-01-01T00:00:00</ModuleTime>
+      <ModuleName>DynamicProxyGenAssembly2</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="B0-46-51-4E-82-92-C4-22-9E-8B-83-02-6F-17-A3-F2-D2-B5-DF-27">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.ServiceModel\v4.0_4.0.0.0__b77a5c561934e089\System.ServiceModel.dll</ModulePath>
+      <ModuleTime>2017-12-22T03:10:38.3572582Z</ModuleTime>
+      <ModuleName>System.ServiceModel</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="">
+      <ModulePath>RefEmit_InMemoryManifestModule</ModulePath>
+      <ModuleTime>0001-01-01T00:00:00</ModuleTime>
+      <ModuleName>Anonymously Hosted DynamicMethods Assembly</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="43-2E-6A-4E-42-C5-B5-A0-58-83-1D-BD-1D-A2-A9-F8-DD-95-24-D4">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Xml.Linq\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.Linq.dll</ModulePath>
+      <ModuleTime>2017-09-29T13:43:08.1155667Z</ModuleTime>
+      <ModuleName>System.Xml.Linq</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="B6-A3-82-E5-87-DE-B8-9D-E6-F2-21-7E-99-D0-D0-CA-9B-B6-1F-B3">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\mscorlib.resources\v4.0_4.0.0.0_de_b77a5c561934e089\mscorlib.resources.dll</ModulePath>
+      <ModuleTime>2017-09-30T14:34:32.9580479Z</ModuleTime>
+      <ModuleName>mscorlib.resources</ModuleName>
+      <Classes />
+    </Module>
+  </Modules>
+</CoverageSession>

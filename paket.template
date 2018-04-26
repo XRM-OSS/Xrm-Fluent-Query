@@ -1,0 +1,16 @@
+type file
+id Xrm.Oss.FluentQuery.Sources
+version 1.0
+authors Florian Krönert
+title
+    Xrm-Fluent-Query
+tags
+    Xrm Dynamics CRM 365 QueryExpression Query DSL OrganizationService
+projectUrl
+    https://github.com/DigitalFlow/Xrm-FluentQuery
+licenseUrl
+    https://github.com/DigitalFlow/Xrm-FluentQuery/blob/master/LICENSE
+description
+    A Dynamics CRM / Dynamics 365 library for fluent IOrganizationService queries
+files
+    src\lib\Xrm.Oss.FluentQuery\FluentQuery.cs ==> content

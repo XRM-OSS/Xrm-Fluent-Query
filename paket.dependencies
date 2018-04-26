@@ -1,0 +1,10 @@
+source https://www.nuget.org/api/v2
+nuget FAKE
+nuget FakeItEasy 1.25.3
+nuget FakeXrmEasy.365
+nuget Microsoft.CrmSdk.CoreAssemblies
+nuget NUnit
+nuget nunit.consolerunner
+nuget NUnit3TestAdapter
+nuget OpenCover
+nuget ReportGenerator
