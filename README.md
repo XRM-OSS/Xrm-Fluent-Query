@@ -1,7 +1,9 @@
-# XRM Fluent Query
+# XRM Fluent Query [![Build status](https://ci.appveyor.com/api/projects/status/x0o7dqnhnwi2i8bk?svg=true)](https://ci.appveyor.com/project/DigitalFlow/xrm-fluent-query)
+
 |Line Coverage|Branch Coverage|
 |-----|-----------------|
 |[![Line coverage](https://cdn.rawgit.com/digitalflow/xrm-fluent-query/master/reports/badge_linecoverage.svg)](https://cdn.rawgit.com/digitalflow/xrm-fluent-query/master/reports/index.htm)|[![Branch coverage](https://cdn.rawgit.com/digitalflow/xrm-fluent-query/master/reports/badge_branchcoverage.svg)](https://cdn.rawgit.com/digitalflow/xrm-fluent-query/master/reports/index.htm)|
+
 This is a library for fluent query operations in Dynamics CRM / Dynamics365.
 
 # Requirements
@@ -17,7 +19,7 @@ This could look something like this:
 ```C#
 var records = service.Query("account")
                 .IncludeColumns("name", "address1_line1")
-				.With.UniqueRecords()
+		.With.UniqueRecords()
                 .RetrieveAll();
 ```
 
