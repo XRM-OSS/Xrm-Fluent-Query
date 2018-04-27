@@ -10,7 +10,7 @@ namespace Xrm.Oss.FluentQuery
 {
     public static class IOrganizationServiceFluentQuery
     {
-        public static IFluentQuery<T> Query<T> (this IOrganizationService service, string entityName) where T : Entity
+        public static IFluentQuery<T> Query<T>(this IOrganizationService service, string entityName) where T : Entity
         {
             return new FluentQuery<T>(entityName, service);
         }
@@ -21,7 +21,7 @@ namespace Xrm.Oss.FluentQuery
         }
     }
 
-    public interface IFluentQuery<T> where T: Entity
+    public interface IFluentQuery<T> where T : Entity
     {
         IFluentQuery<T> IncludeColumns(params string[] columns);
         QueryExpression Expression { get; }
@@ -29,6 +29,8 @@ namespace Xrm.Oss.FluentQuery
         List<T> RetrieveAll();
 
         IFluentQuerySetting<T> With { get; }
+
+        IFluentQuery<T> Link(Action<IFluentLinkEntity> definition);
     }
 
     public interface IFluentQuerySetting<T> where T : Entity
@@ -37,6 +39,7 @@ namespace Xrm.Oss.FluentQuery
         IFluentQuery<T> DatabaseLock(bool useLock = true);
         IFluentQuery<T> UniqueRecords(bool unique = true);
         IFluentQuery<T> PageInfo(PagingInfo pageInfo);
+        IFluentQuery<T> TotalRecordCount(bool returnTotalRecordCount = true);
     }
 
     public class FluentQuery<T> : IFluentQuery<T>, IFluentQuerySetting<T> where T : Entity
@@ -44,7 +47,7 @@ namespace Xrm.Oss.FluentQuery
         private QueryExpression _query;
         private IOrganizationService _service;
 
-        public FluentQuery (string entityName, IOrganizationService service)
+        public FluentQuery(string entityName, IOrganizationService service)
         {
             _query = new QueryExpression
             {
@@ -142,12 +145,136 @@ namespace Xrm.Oss.FluentQuery
             return this;
         }
 
+        public IFluentQuery<T> TotalRecordCount(bool returnTotalRecordCount = true)
+        {
+            _query.PageInfo.ReturnTotalRecordCount = returnTotalRecordCount;
+
+            return this;
+        }
+
+        public IFluentQuery<T> Link(Action<IFluentLinkEntity> definition)
+        {
+            var link = new FluentLinkEntity();
+
+            definition(link);
+
+            _query.LinkEntities.Add(link.GetLinkEntity());
+
+            return this;
+        }
+        
         public QueryExpression Expression
         {
             get
             {
                 return _query;
             }
+        }
+    }
+
+    public interface IFluentLinkEntity
+    {
+        IFluentLinkEntity FromEntity(string entityName);
+        IFluentLinkEntity FromAttribute(string attributeName);
+        IFluentLinkEntity ToEntity(string entityName);
+        IFluentLinkEntity ToAttribute(string attributeName);
+
+        IFluentLinkEntity IncludeColumns(params string[] columns);
+
+        IFluentLinkEntitySetting With { get; }
+
+        IFluentLinkEntity Link(Action<IFluentLinkEntity> definition);
+    }
+
+    public interface IFluentLinkEntitySetting
+    {
+        IFluentLinkEntity Alias(string name);
+        IFluentLinkEntity LinkType(JoinOperator joinOperator);
+    }
+
+    public class FluentLinkEntity : IFluentLinkEntity, IFluentLinkEntitySetting
+    {
+        private LinkEntity _linkEntity;
+
+        public FluentLinkEntity()
+        {
+            _linkEntity = new LinkEntity
+            {
+                Columns = new ColumnSet()
+            };
+        }
+
+        public IFluentLinkEntitySetting With
+        {
+            get
+            {
+                return this;
+            }
+        }
+
+        public IFluentLinkEntity Alias(string name)
+        {
+            _linkEntity.EntityAlias = name;
+
+            return this;
+        }
+
+        public IFluentLinkEntity FromAttribute(string attributeName)
+        {
+            _linkEntity.LinkFromAttributeName = attributeName;
+
+            return this;
+        }
+
+        public IFluentLinkEntity FromEntity(string entityName)
+        {
+            _linkEntity.LinkFromEntityName = entityName;
+
+            return this;
+        }
+
+        public IFluentLinkEntity IncludeColumns(params string[] columns)
+        {
+            _linkEntity.Columns.AddColumns(columns);
+
+            return this;
+        }
+
+        public IFluentLinkEntity Link(Action<IFluentLinkEntity> definition)
+        {
+            var link = new FluentLinkEntity();
+
+            definition(link);
+
+            _linkEntity.LinkEntities.Add(link.GetLinkEntity());
+
+            return this;
+        }
+
+        public IFluentLinkEntity LinkType(JoinOperator joinOperator)
+        {
+            _linkEntity.JoinOperator = joinOperator;
+
+            return this;
+        }
+
+        public IFluentLinkEntity ToAttribute(string attributeName)
+        {
+            _linkEntity.LinkToAttributeName = attributeName;
+
+            return this;
+        }
+
+        public IFluentLinkEntity ToEntity(string entityName)
+        {
+            _linkEntity.LinkToEntityName = entityName;
+
+            return this;
+        }
+
+        internal LinkEntity GetLinkEntity()
+        {
+            return _linkEntity;
         }
     }
 }

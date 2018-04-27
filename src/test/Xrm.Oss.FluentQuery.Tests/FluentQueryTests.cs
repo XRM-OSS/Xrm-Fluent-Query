@@ -175,5 +175,18 @@ namespace Xrm.Oss.FluentQuery.Tests
 
             Assert.That(query.Distinct, Is.EqualTo(true));
         }
+
+        [Test]
+        public void It_Should_Set_Total_Record_Count()
+        {
+            var context = new XrmFakedContext();
+            var service = context.GetFakedOrganizationService();
+
+            var query = service.Query("account")
+                .With.TotalRecordCount()
+                .Expression;
+
+            Assert.That(query.PageInfo.ReturnTotalRecordCount, Is.EqualTo(true));
+        }
     }
 }

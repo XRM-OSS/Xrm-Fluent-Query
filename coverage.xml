@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CoverageSession xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <Summary numSequencePoints="63" visitedSequencePoints="60" numBranchPoints="16" visitedBranchPoints="14" sequenceCoverage="95.24" branchCoverage="87.5" maxCyclomaticComplexity="3" minCyclomaticComplexity="1" visitedClasses="3" numClasses="3" visitedMethods="13" numMethods="14" />
+  <Summary numSequencePoints="117" visitedSequencePoints="114" numBranchPoints="29" visitedBranchPoints="27" sequenceCoverage="97.44" branchCoverage="93.10" maxCyclomaticComplexity="3" minCyclomaticComplexity="1" visitedClasses="4" numClasses="4" visitedMethods="26" numMethods="27" />
   <Modules>
     <Module skippedDueTo="Filter" hash="D9-A4-43-79-FA-F4-2A-B0-31-3A-20-A1-03-C5-E0-42-94-AB-99-28">
       <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_64\mscorlib\v4.0_4.0.0.0__b77a5c561934e089\mscorlib.dll</ModulePath>
@@ -152,9 +152,9 @@
       <ModuleName>System.Web</ModuleName>
       <Classes />
     </Module>
-    <Module skippedDueTo="Filter" hash="06-15-46-E1-2A-34-F8-7A-CD-74-11-8D-1D-C8-9D-56-A1-8C-F3-8B">
+    <Module skippedDueTo="Filter" hash="10-D7-30-8D-FE-DC-FE-9B-9C-B9-4C-FD-9E-C7-68-CC-0F-5D-2F-E8">
       <ModulePath>C:\Users\Florian\Entwicklung\Xrm-Fluent-Query\test\Xrm.Oss.FluentQuery.Tests.dll</ModulePath>
-      <ModuleTime>2018-04-26T23:20:36.4158205Z</ModuleTime>
+      <ModuleTime>2018-04-27T22:26:46.1027747Z</ModuleTime>
       <ModuleName>Xrm.Oss.FluentQuery.Tests</ModuleName>
       <Classes />
     </Module>
@@ -188,10 +188,10 @@
       <ModuleName>System.Activities</ModuleName>
       <Classes />
     </Module>
-    <Module hash="F5-2D-32-7A-1A-8A-4F-BB-A0-54-96-2B-91-BB-71-24-66-D5-20-5E">
-      <Summary numSequencePoints="63" visitedSequencePoints="60" numBranchPoints="16" visitedBranchPoints="14" sequenceCoverage="95.24" branchCoverage="87.5" maxCyclomaticComplexity="3" minCyclomaticComplexity="1" visitedClasses="3" numClasses="3" visitedMethods="13" numMethods="14" />
+    <Module hash="BF-41-65-18-F3-1F-3B-EE-DF-5A-1F-D2-14-44-91-E4-4E-47-65-19">
+      <Summary numSequencePoints="117" visitedSequencePoints="114" numBranchPoints="29" visitedBranchPoints="27" sequenceCoverage="97.44" branchCoverage="93.10" maxCyclomaticComplexity="3" minCyclomaticComplexity="1" visitedClasses="4" numClasses="4" visitedMethods="26" numMethods="27" />
       <ModulePath>C:\Users\Florian\Entwicklung\Xrm-Fluent-Query\test\Xrm.Oss.FluentQuery.dll</ModulePath>
-      <ModuleTime>2018-04-26T23:09:14.0967115Z</ModuleTime>
+      <ModuleTime>2018-04-27T22:25:56.5791789Z</ModuleTime>
       <ModuleName>Xrm.Oss.FluentQuery</ModuleName>
       <Files>
         <File uid="1" fullPath="C:\Users\Florian\Entwicklung\Xrm-Fluent-Query\src\lib\Xrm.Oss.FluentQuery\FluentQuery.cs" />
@@ -225,176 +225,206 @@
               <Name>Xrm.Oss.FluentQuery.IFluentQuery`1&lt;Microsoft.Xrm.Sdk.Entity&gt; Xrm.Oss.FluentQuery.IOrganizationServiceFluentQuery::Query(Microsoft.Xrm.Sdk.IOrganizationService,System.String)</Name>
               <FileRef uid="1" />
               <SequencePoints>
-                <SequencePoint vc="8" uspid="4" ordinal="0" offset="0" sl="19" sc="9" el="19" ec="10" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="8" uspid="5" ordinal="1" offset="1" sl="20" sc="13" el="20" ec="65" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="8" uspid="6" ordinal="2" offset="11" sl="21" sc="9" el="21" ec="10" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="13" uspid="4" ordinal="0" offset="0" sl="19" sc="9" el="19" ec="10" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="13" uspid="5" ordinal="1" offset="1" sl="20" sc="13" el="20" ec="65" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="13" uspid="6" ordinal="2" offset="11" sl="21" sc="9" el="21" ec="10" bec="0" bev="0" fileid="1" />
               </SequencePoints>
               <BranchPoints />
-              <MethodPoint xsi:type="SequencePoint" vc="8" uspid="4" ordinal="0" offset="0" sl="19" sc="9" el="19" ec="10" bec="0" bev="0" fileid="1" />
+              <MethodPoint xsi:type="SequencePoint" vc="13" uspid="4" ordinal="0" offset="0" sl="19" sc="9" el="19" ec="10" bec="0" bev="0" fileid="1" />
             </Method>
           </Methods>
         </Class>
         <Class>
-          <Summary numSequencePoints="55" visitedSequencePoints="55" numBranchPoints="12" visitedBranchPoints="11" sequenceCoverage="100" branchCoverage="91.67" maxCyclomaticComplexity="3" minCyclomaticComplexity="1" visitedClasses="1" numClasses="1" visitedMethods="10" numMethods="10" />
+          <Summary numSequencePoints="65" visitedSequencePoints="65" numBranchPoints="14" visitedBranchPoints="13" sequenceCoverage="100" branchCoverage="92.86" maxCyclomaticComplexity="3" minCyclomaticComplexity="1" visitedClasses="1" numClasses="1" visitedMethods="12" numMethods="12" />
           <FullName>Xrm.Oss.FluentQuery.FluentQuery`1</FullName>
           <Methods>
             <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="true" isSetter="false">
               <Summary numSequencePoints="3" visitedSequencePoints="3" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
-              <MetadataToken>100663310</MetadataToken>
+              <MetadataToken>100663312</MetadataToken>
               <Name>Xrm.Oss.FluentQuery.IFluentQuerySetting`1&lt;T&gt; Xrm.Oss.FluentQuery.FluentQuery`1::get_With()</Name>
               <FileRef uid="1" />
               <SequencePoints>
-                <SequencePoint vc="4" uspid="7" ordinal="0" offset="0" sl="73" sc="13" el="73" ec="14" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="4" uspid="8" ordinal="1" offset="1" sl="74" sc="17" el="74" ec="29" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="4" uspid="9" ordinal="2" offset="5" sl="75" sc="13" el="75" ec="14" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="5" uspid="7" ordinal="0" offset="0" sl="76" sc="13" el="76" ec="14" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="5" uspid="8" ordinal="1" offset="1" sl="77" sc="17" el="77" ec="29" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="5" uspid="9" ordinal="2" offset="5" sl="78" sc="13" el="78" ec="14" bec="0" bev="0" fileid="1" />
               </SequencePoints>
               <BranchPoints />
-              <MethodPoint xsi:type="SequencePoint" vc="4" uspid="7" ordinal="0" offset="0" sl="73" sc="13" el="73" ec="14" bec="0" bev="0" fileid="1" />
+              <MethodPoint xsi:type="SequencePoint" vc="5" uspid="7" ordinal="0" offset="0" sl="76" sc="13" el="76" ec="14" bec="0" bev="0" fileid="1" />
             </Method>
             <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="true" isSetter="false">
               <Summary numSequencePoints="3" visitedSequencePoints="3" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
-              <MetadataToken>100663317</MetadataToken>
+              <MetadataToken>100663321</MetadataToken>
               <Name>Microsoft.Xrm.Sdk.Query.QueryExpression Xrm.Oss.FluentQuery.FluentQuery`1::get_Expression()</Name>
               <FileRef uid="1" />
               <SequencePoints>
-                <SequencePoint vc="6" uspid="10" ordinal="0" offset="0" sl="148" sc="13" el="148" ec="14" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="6" uspid="11" ordinal="1" offset="1" sl="149" sc="17" el="149" ec="31" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="6" uspid="12" ordinal="2" offset="10" sl="150" sc="13" el="150" ec="14" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="11" uspid="10" ordinal="0" offset="0" sl="169" sc="13" el="169" ec="14" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="11" uspid="11" ordinal="1" offset="1" sl="170" sc="17" el="170" ec="31" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="11" uspid="12" ordinal="2" offset="10" sl="171" sc="13" el="171" ec="14" bec="0" bev="0" fileid="1" />
               </SequencePoints>
               <BranchPoints />
-              <MethodPoint xsi:type="SequencePoint" vc="6" uspid="10" ordinal="0" offset="0" sl="148" sc="13" el="148" ec="14" bec="0" bev="0" fileid="1" />
+              <MethodPoint xsi:type="SequencePoint" vc="11" uspid="10" ordinal="0" offset="0" sl="169" sc="13" el="169" ec="14" bec="0" bev="0" fileid="1" />
             </Method>
             <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="true" isStatic="false" isGetter="false" isSetter="false">
               <Summary numSequencePoints="5" visitedSequencePoints="5" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
-              <MetadataToken>100663308</MetadataToken>
+              <MetadataToken>100663310</MetadataToken>
               <Name>System.Void Xrm.Oss.FluentQuery.FluentQuery`1::.ctor(System.String,Microsoft.Xrm.Sdk.IOrganizationService)</Name>
               <FileRef uid="1" />
               <SequencePoints>
-                <SequencePoint vc="8" uspid="13" ordinal="0" offset="0" sl="47" sc="9" el="47" ec="77" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="8" uspid="14" ordinal="1" offset="7" sl="48" sc="9" el="48" ec="10" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="8" uspid="15" ordinal="2" offset="8" sl="49" sc="13" el="58" ec="15" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="8" uspid="16" ordinal="3" offset="67" sl="60" sc="13" el="60" ec="32" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="8" uspid="17" ordinal="4" offset="74" sl="61" sc="9" el="61" ec="10" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="13" uspid="13" ordinal="0" offset="0" sl="50" sc="9" el="50" ec="76" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="13" uspid="14" ordinal="1" offset="7" sl="51" sc="9" el="51" ec="10" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="13" uspid="15" ordinal="2" offset="8" sl="52" sc="13" el="61" ec="15" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="13" uspid="16" ordinal="3" offset="67" sl="63" sc="13" el="63" ec="32" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="13" uspid="17" ordinal="4" offset="74" sl="64" sc="9" el="64" ec="10" bec="0" bev="0" fileid="1" />
               </SequencePoints>
               <BranchPoints />
-              <MethodPoint xsi:type="SequencePoint" vc="8" uspid="13" ordinal="0" offset="0" sl="47" sc="9" el="47" ec="77" bec="0" bev="0" fileid="1" />
-            </Method>
-            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
-              <Summary numSequencePoints="4" visitedSequencePoints="4" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
-              <MetadataToken>100663309</MetadataToken>
-              <Name>Xrm.Oss.FluentQuery.IFluentQuery`1&lt;T&gt; Xrm.Oss.FluentQuery.FluentQuery`1::IncludeColumns(System.String[])</Name>
-              <FileRef uid="1" />
-              <SequencePoints>
-                <SequencePoint vc="6" uspid="18" ordinal="0" offset="0" sl="64" sc="9" el="64" ec="10" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="6" uspid="19" ordinal="1" offset="1" sl="65" sc="13" el="65" ec="50" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="6" uspid="20" ordinal="2" offset="19" sl="67" sc="13" el="67" ec="25" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="6" uspid="21" ordinal="3" offset="23" sl="68" sc="9" el="68" ec="10" bec="0" bev="0" fileid="1" />
-              </SequencePoints>
-              <BranchPoints />
-              <MethodPoint xsi:type="SequencePoint" vc="6" uspid="18" ordinal="0" offset="0" sl="64" sc="9" el="64" ec="10" bec="0" bev="0" fileid="1" />
+              <MethodPoint xsi:type="SequencePoint" vc="13" uspid="13" ordinal="0" offset="0" sl="50" sc="9" el="50" ec="76" bec="0" bev="0" fileid="1" />
             </Method>
             <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
               <Summary numSequencePoints="4" visitedSequencePoints="4" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
               <MetadataToken>100663311</MetadataToken>
+              <Name>Xrm.Oss.FluentQuery.IFluentQuery`1&lt;T&gt; Xrm.Oss.FluentQuery.FluentQuery`1::IncludeColumns(System.String[])</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="6" uspid="18" ordinal="0" offset="0" sl="67" sc="9" el="67" ec="10" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="6" uspid="19" ordinal="1" offset="1" sl="68" sc="13" el="68" ec="50" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="6" uspid="20" ordinal="2" offset="19" sl="70" sc="13" el="70" ec="25" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="6" uspid="21" ordinal="3" offset="23" sl="71" sc="9" el="71" ec="10" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="6" uspid="18" ordinal="0" offset="0" sl="67" sc="9" el="67" ec="10" bec="0" bev="0" fileid="1" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="4" visitedSequencePoints="4" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663313</MetadataToken>
               <Name>Xrm.Oss.FluentQuery.IFluentQuery`1&lt;T&gt; Xrm.Oss.FluentQuery.FluentQuery`1::RecordCount(System.Nullable`1&lt;System.Int32&gt;)</Name>
               <FileRef uid="1" />
               <SequencePoints>
-                <SequencePoint vc="1" uspid="22" ordinal="0" offset="0" sl="79" sc="9" el="79" ec="10" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="1" uspid="23" ordinal="1" offset="1" sl="80" sc="13" el="80" ec="40" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="1" uspid="24" ordinal="2" offset="14" sl="82" sc="13" el="82" ec="25" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="1" uspid="25" ordinal="3" offset="18" sl="83" sc="9" el="83" ec="10" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="22" ordinal="0" offset="0" sl="82" sc="9" el="82" ec="10" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="23" ordinal="1" offset="1" sl="83" sc="13" el="83" ec="40" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="24" ordinal="2" offset="14" sl="85" sc="13" el="85" ec="25" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="25" ordinal="3" offset="18" sl="86" sc="9" el="86" ec="10" bec="0" bev="0" fileid="1" />
               </SequencePoints>
               <BranchPoints />
-              <MethodPoint xsi:type="SequencePoint" vc="1" uspid="22" ordinal="0" offset="0" sl="79" sc="9" el="79" ec="10" bec="0" bev="0" fileid="1" />
+              <MethodPoint xsi:type="SequencePoint" vc="1" uspid="22" ordinal="0" offset="0" sl="82" sc="9" el="82" ec="10" bec="0" bev="0" fileid="1" />
             </Method>
             <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
               <Summary numSequencePoints="4" visitedSequencePoints="4" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
-              <MetadataToken>100663312</MetadataToken>
+              <MetadataToken>100663314</MetadataToken>
               <Name>Xrm.Oss.FluentQuery.IFluentQuery`1&lt;T&gt; Xrm.Oss.FluentQuery.FluentQuery`1::DatabaseLock(System.Boolean)</Name>
               <FileRef uid="1" />
               <SequencePoints>
-                <SequencePoint vc="1" uspid="26" ordinal="0" offset="0" sl="86" sc="9" el="86" ec="10" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="1" uspid="27" ordinal="1" offset="1" sl="87" sc="13" el="87" ec="38" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="1" uspid="28" ordinal="2" offset="17" sl="89" sc="13" el="89" ec="25" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="1" uspid="29" ordinal="3" offset="21" sl="90" sc="9" el="90" ec="10" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="26" ordinal="0" offset="0" sl="89" sc="9" el="89" ec="10" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="27" ordinal="1" offset="1" sl="90" sc="13" el="90" ec="38" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="28" ordinal="2" offset="17" sl="92" sc="13" el="92" ec="25" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="29" ordinal="3" offset="21" sl="93" sc="9" el="93" ec="10" bec="0" bev="0" fileid="1" />
               </SequencePoints>
               <BranchPoints />
-              <MethodPoint xsi:type="SequencePoint" vc="1" uspid="26" ordinal="0" offset="0" sl="86" sc="9" el="86" ec="10" bec="0" bev="0" fileid="1" />
+              <MethodPoint xsi:type="SequencePoint" vc="1" uspid="26" ordinal="0" offset="0" sl="89" sc="9" el="89" ec="10" bec="0" bev="0" fileid="1" />
             </Method>
             <Method visited="true" cyclomaticComplexity="2" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
               <Summary numSequencePoints="3" visitedSequencePoints="3" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
-              <MetadataToken>100663313</MetadataToken>
+              <MetadataToken>100663315</MetadataToken>
               <Name>System.Collections.Generic.List`1&lt;T&gt; Xrm.Oss.FluentQuery.FluentQuery`1::Retrieve()</Name>
               <FileRef uid="1" />
               <SequencePoints>
-                <SequencePoint vc="1" uspid="30" ordinal="0" offset="0" sl="93" sc="9" el="93" ec="10" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="1" uspid="31" ordinal="1" offset="1" sl="94" sc="13" el="95" ec="27" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="1" uspid="32" ordinal="2" offset="67" sl="96" sc="9" el="96" ec="10" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="30" ordinal="0" offset="0" sl="96" sc="9" el="96" ec="10" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="31" ordinal="1" offset="1" sl="97" sc="13" el="98" ec="27" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="32" ordinal="2" offset="67" sl="99" sc="9" el="99" ec="10" bec="0" bev="0" fileid="1" />
               </SequencePoints>
               <BranchPoints />
-              <MethodPoint xsi:type="SequencePoint" vc="1" uspid="30" ordinal="0" offset="0" sl="93" sc="9" el="93" ec="10" bec="0" bev="0" fileid="1" />
+              <MethodPoint xsi:type="SequencePoint" vc="1" uspid="30" ordinal="0" offset="0" sl="96" sc="9" el="96" ec="10" bec="0" bev="0" fileid="1" />
             </Method>
             <Method visited="true" cyclomaticComplexity="3" nPathComplexity="2" sequenceCoverage="100" branchCoverage="66.67" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
               <Summary numSequencePoints="21" visitedSequencePoints="21" numBranchPoints="3" visitedBranchPoints="2" sequenceCoverage="100" branchCoverage="66.67" maxCyclomaticComplexity="3" minCyclomaticComplexity="3" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
-              <MetadataToken>100663314</MetadataToken>
+              <MetadataToken>100663316</MetadataToken>
               <Name>System.Collections.Generic.List`1&lt;T&gt; Xrm.Oss.FluentQuery.FluentQuery`1::RetrieveAll()</Name>
               <FileRef uid="1" />
               <SequencePoints>
-                <SequencePoint vc="1" uspid="35" ordinal="0" offset="0" sl="99" sc="9" el="99" ec="10" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="1" uspid="36" ordinal="1" offset="1" sl="100" sc="13" el="100" ec="41" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="1" uspid="37" ordinal="2" offset="7" sl="102" sc="13" el="102" ec="65" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="1" uspid="38" ordinal="3" offset="24" sl="103" sc="13" el="103" ec="69" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="1" uspid="39" ordinal="4" offset="41" sl="105" sc="13" el="105" ec="37" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="1" uspid="40" ordinal="5" offset="43" sl="106" sc="13" el="106" ec="49" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="1" uspid="41" ordinal="6" offset="46" sl="107" sc="13" el="107" ec="56" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="1" uspid="42" ordinal="7" offset="49" sl="110" sc="13" el="110" ec="14" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="1" uspid="43" ordinal="8" offset="50" sl="111" sc="17" el="111" ec="57" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="1" uspid="44" ordinal="9" offset="69" sl="112" sc="17" el="112" ec="61" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="1" uspid="45" ordinal="10" offset="88" sl="114" sc="17" el="114" ec="66" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="1" uspid="46" ordinal="11" offset="107" sl="115" sc="17" el="116" ec="31" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="1" uspid="47" ordinal="12" offset="157" sl="118" sc="17" el="118" ec="42" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="1" uspid="48" ordinal="13" offset="166" sl="120" sc="17" el="120" ec="52" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="1" uspid="49" ordinal="14" offset="174" sl="121" sc="17" el="121" ec="30" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="1" uspid="50" ordinal="15" offset="180" sl="122" sc="13" el="122" ec="14" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="1" uspid="51" ordinal="16" offset="181" sl="123" sc="13" el="123" ec="33" bec="2" bev="1" fileid="1" />
-                <SequencePoint vc="1" uspid="52" ordinal="17" offset="191" sl="125" sc="13" el="125" ec="61" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="1" uspid="53" ordinal="18" offset="209" sl="126" sc="13" el="126" ec="65" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="1" uspid="54" ordinal="19" offset="227" sl="128" sc="13" el="128" ec="28" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="1" uspid="55" ordinal="20" offset="232" sl="129" sc="9" el="129" ec="10" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="35" ordinal="0" offset="0" sl="102" sc="9" el="102" ec="10" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="36" ordinal="1" offset="1" sl="103" sc="13" el="103" ec="41" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="37" ordinal="2" offset="7" sl="105" sc="13" el="105" ec="65" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="38" ordinal="3" offset="24" sl="106" sc="13" el="106" ec="69" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="39" ordinal="4" offset="41" sl="108" sc="13" el="108" ec="37" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="40" ordinal="5" offset="43" sl="109" sc="13" el="109" ec="49" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="41" ordinal="6" offset="46" sl="110" sc="13" el="110" ec="56" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="42" ordinal="7" offset="49" sl="113" sc="13" el="113" ec="14" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="43" ordinal="8" offset="50" sl="114" sc="17" el="114" ec="57" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="44" ordinal="9" offset="69" sl="115" sc="17" el="115" ec="61" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="45" ordinal="10" offset="88" sl="117" sc="17" el="117" ec="66" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="46" ordinal="11" offset="107" sl="118" sc="17" el="119" ec="31" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="47" ordinal="12" offset="157" sl="121" sc="17" el="121" ec="42" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="48" ordinal="13" offset="166" sl="123" sc="17" el="123" ec="52" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="49" ordinal="14" offset="174" sl="124" sc="17" el="124" ec="30" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="50" ordinal="15" offset="180" sl="125" sc="13" el="125" ec="14" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="51" ordinal="16" offset="181" sl="126" sc="13" el="126" ec="33" bec="2" bev="1" fileid="1" />
+                <SequencePoint vc="1" uspid="52" ordinal="17" offset="191" sl="128" sc="13" el="128" ec="61" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="53" ordinal="18" offset="209" sl="129" sc="13" el="129" ec="65" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="54" ordinal="19" offset="227" sl="131" sc="13" el="131" ec="28" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="55" ordinal="20" offset="232" sl="132" sc="9" el="132" ec="10" bec="0" bev="0" fileid="1" />
               </SequencePoints>
               <BranchPoints>
-                <BranchPoint vc="1" uspid="58" ordinal="2" offset="186" sl="123" path="0" offsetend="191" fileid="1" />
-                <BranchPoint vc="0" uspid="59" ordinal="3" offset="186" sl="123" path="1" offsetend="49" fileid="1" />
+                <BranchPoint vc="1" uspid="58" ordinal="2" offset="186" sl="126" path="0" offsetend="191" fileid="1" />
+                <BranchPoint vc="0" uspid="59" ordinal="3" offset="186" sl="126" path="1" offsetend="49" fileid="1" />
               </BranchPoints>
-              <MethodPoint xsi:type="SequencePoint" vc="1" uspid="35" ordinal="0" offset="0" sl="99" sc="9" el="99" ec="10" bec="0" bev="0" fileid="1" />
+              <MethodPoint xsi:type="SequencePoint" vc="1" uspid="35" ordinal="0" offset="0" sl="102" sc="9" el="102" ec="10" bec="0" bev="0" fileid="1" />
             </Method>
             <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
               <Summary numSequencePoints="4" visitedSequencePoints="4" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
-              <MetadataToken>100663315</MetadataToken>
+              <MetadataToken>100663317</MetadataToken>
               <Name>Xrm.Oss.FluentQuery.IFluentQuery`1&lt;T&gt; Xrm.Oss.FluentQuery.FluentQuery`1::UniqueRecords(System.Boolean)</Name>
               <FileRef uid="1" />
               <SequencePoints>
-                <SequencePoint vc="1" uspid="60" ordinal="0" offset="0" sl="132" sc="9" el="132" ec="10" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="1" uspid="61" ordinal="1" offset="1" sl="133" sc="13" el="133" ec="36" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="1" uspid="62" ordinal="2" offset="14" sl="135" sc="13" el="135" ec="25" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="1" uspid="63" ordinal="3" offset="18" sl="136" sc="9" el="136" ec="10" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="60" ordinal="0" offset="0" sl="135" sc="9" el="135" ec="10" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="61" ordinal="1" offset="1" sl="136" sc="13" el="136" ec="36" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="62" ordinal="2" offset="14" sl="138" sc="13" el="138" ec="25" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="63" ordinal="3" offset="18" sl="139" sc="9" el="139" ec="10" bec="0" bev="0" fileid="1" />
               </SequencePoints>
               <BranchPoints />
-              <MethodPoint xsi:type="SequencePoint" vc="1" uspid="60" ordinal="0" offset="0" sl="132" sc="9" el="132" ec="10" bec="0" bev="0" fileid="1" />
+              <MethodPoint xsi:type="SequencePoint" vc="1" uspid="60" ordinal="0" offset="0" sl="135" sc="9" el="135" ec="10" bec="0" bev="0" fileid="1" />
             </Method>
             <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
               <Summary numSequencePoints="4" visitedSequencePoints="4" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
-              <MetadataToken>100663316</MetadataToken>
+              <MetadataToken>100663318</MetadataToken>
               <Name>Xrm.Oss.FluentQuery.IFluentQuery`1&lt;T&gt; Xrm.Oss.FluentQuery.FluentQuery`1::PageInfo(Microsoft.Xrm.Sdk.Query.PagingInfo)</Name>
               <FileRef uid="1" />
               <SequencePoints>
-                <SequencePoint vc="1" uspid="64" ordinal="0" offset="0" sl="139" sc="9" el="139" ec="10" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="1" uspid="65" ordinal="1" offset="1" sl="140" sc="13" el="140" ec="40" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="1" uspid="66" ordinal="2" offset="14" sl="142" sc="13" el="142" ec="25" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="1" uspid="67" ordinal="3" offset="18" sl="143" sc="9" el="143" ec="10" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="64" ordinal="0" offset="0" sl="142" sc="9" el="142" ec="10" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="65" ordinal="1" offset="1" sl="143" sc="13" el="143" ec="40" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="66" ordinal="2" offset="14" sl="145" sc="13" el="145" ec="25" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="67" ordinal="3" offset="18" sl="146" sc="9" el="146" ec="10" bec="0" bev="0" fileid="1" />
               </SequencePoints>
               <BranchPoints />
-              <MethodPoint xsi:type="SequencePoint" vc="1" uspid="64" ordinal="0" offset="0" sl="139" sc="9" el="139" ec="10" bec="0" bev="0" fileid="1" />
+              <MethodPoint xsi:type="SequencePoint" vc="1" uspid="64" ordinal="0" offset="0" sl="142" sc="9" el="142" ec="10" bec="0" bev="0" fileid="1" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="4" visitedSequencePoints="4" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663319</MetadataToken>
+              <Name>Xrm.Oss.FluentQuery.IFluentQuery`1&lt;T&gt; Xrm.Oss.FluentQuery.FluentQuery`1::TotalRecordCount(System.Boolean)</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="1" uspid="68" ordinal="0" offset="0" sl="149" sc="9" el="149" ec="10" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="69" ordinal="1" offset="1" sl="150" sc="13" el="150" ec="77" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="70" ordinal="2" offset="19" sl="152" sc="13" el="152" ec="25" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="71" ordinal="3" offset="23" sl="153" sc="9" el="153" ec="10" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="1" uspid="68" ordinal="0" offset="0" sl="149" sc="9" el="149" ec="10" bec="0" bev="0" fileid="1" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="6" visitedSequencePoints="6" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663320</MetadataToken>
+              <Name>Xrm.Oss.FluentQuery.IFluentQuery`1&lt;T&gt; Xrm.Oss.FluentQuery.FluentQuery`1::Link(System.Action`1&lt;Xrm.Oss.FluentQuery.IFluentLinkEntity&gt;)</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="4" uspid="72" ordinal="0" offset="0" sl="156" sc="9" el="156" ec="10" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="4" uspid="73" ordinal="1" offset="1" sl="157" sc="13" el="157" ec="47" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="4" uspid="74" ordinal="2" offset="7" sl="159" sc="13" el="159" ec="30" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="4" uspid="75" ordinal="3" offset="15" sl="161" sc="13" el="161" ec="59" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="4" uspid="76" ordinal="4" offset="38" sl="163" sc="13" el="163" ec="25" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="4" uspid="77" ordinal="5" offset="42" sl="164" sc="9" el="164" ec="10" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="4" uspid="72" ordinal="0" offset="0" sl="156" sc="9" el="156" ec="10" bec="0" bev="0" fileid="1" />
             </Method>
           </Methods>
         </Class>
@@ -404,41 +434,201 @@
           <Methods>
             <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="true" isStatic="true" isGetter="false" isSetter="false">
               <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" />
-              <MetadataToken>100663318</MetadataToken>
+              <MetadataToken>100663342</MetadataToken>
               <Name>System.Void Xrm.Oss.FluentQuery.FluentQuery`1/&lt;&gt;c::.cctor()</Name>
               <SequencePoints />
               <BranchPoints />
-              <MethodPoint vc="1" uspid="68" ordinal="0" offset="0" />
+              <MethodPoint vc="1" uspid="78" ordinal="0" offset="0" />
             </Method>
             <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="true" isStatic="false" isGetter="false" isSetter="false">
               <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" />
-              <MetadataToken>100663319</MetadataToken>
+              <MetadataToken>100663343</MetadataToken>
               <Name>System.Void Xrm.Oss.FluentQuery.FluentQuery`1/&lt;&gt;c::.ctor()</Name>
               <SequencePoints />
               <BranchPoints />
-              <MethodPoint vc="1" uspid="69" ordinal="0" offset="0" />
+              <MethodPoint vc="1" uspid="79" ordinal="0" offset="0" />
             </Method>
             <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
               <Summary numSequencePoints="1" visitedSequencePoints="1" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
-              <MetadataToken>100663320</MetadataToken>
+              <MetadataToken>100663344</MetadataToken>
               <Name>T Xrm.Oss.FluentQuery.FluentQuery`1/&lt;&gt;c::&lt;Retrieve&gt;b__8_0(Microsoft.Xrm.Sdk.Entity)</Name>
               <FileRef uid="1" />
               <SequencePoints>
-                <SequencePoint vc="1" uspid="70" ordinal="0" offset="0" sl="94" sc="75" el="94" ec="90" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="80" ordinal="0" offset="0" sl="97" sc="75" el="97" ec="90" bec="0" bev="0" fileid="1" />
               </SequencePoints>
               <BranchPoints />
-              <MethodPoint xsi:type="SequencePoint" vc="1" uspid="70" ordinal="0" offset="0" sl="94" sc="75" el="94" ec="90" bec="0" bev="0" fileid="1" />
+              <MethodPoint xsi:type="SequencePoint" vc="1" uspid="80" ordinal="0" offset="0" sl="97" sc="75" el="97" ec="90" bec="0" bev="0" fileid="1" />
             </Method>
             <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
               <Summary numSequencePoints="1" visitedSequencePoints="1" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
-              <MetadataToken>100663321</MetadataToken>
+              <MetadataToken>100663345</MetadataToken>
               <Name>T Xrm.Oss.FluentQuery.FluentQuery`1/&lt;&gt;c::&lt;RetrieveAll&gt;b__9_0(Microsoft.Xrm.Sdk.Entity)</Name>
               <FileRef uid="1" />
               <SequencePoints>
-                <SequencePoint vc="2" uspid="71" ordinal="0" offset="0" sl="115" sc="60" el="115" ec="75" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="2" uspid="81" ordinal="0" offset="0" sl="118" sc="60" el="118" ec="75" bec="0" bev="0" fileid="1" />
               </SequencePoints>
               <BranchPoints />
-              <MethodPoint xsi:type="SequencePoint" vc="2" uspid="71" ordinal="0" offset="0" sl="115" sc="60" el="115" ec="75" bec="0" bev="0" fileid="1" />
+              <MethodPoint xsi:type="SequencePoint" vc="2" uspid="81" ordinal="0" offset="0" sl="118" sc="60" el="118" ec="75" bec="0" bev="0" fileid="1" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="44" visitedSequencePoints="44" numBranchPoints="11" visitedBranchPoints="11" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="1" numClasses="1" visitedMethods="11" numMethods="11" />
+          <FullName>Xrm.Oss.FluentQuery.FluentLinkEntity</FullName>
+          <Methods>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="true" isSetter="false">
+              <Summary numSequencePoints="3" visitedSequencePoints="3" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663332</MetadataToken>
+              <Name>Xrm.Oss.FluentQuery.IFluentLinkEntitySetting Xrm.Oss.FluentQuery.FluentLinkEntity::get_With()</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="4" uspid="82" ordinal="0" offset="0" sl="210" sc="13" el="210" ec="14" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="4" uspid="83" ordinal="1" offset="1" sl="211" sc="17" el="211" ec="29" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="4" uspid="84" ordinal="2" offset="5" sl="212" sc="13" el="212" ec="14" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="4" uspid="82" ordinal="0" offset="0" sl="210" sc="13" el="210" ec="14" bec="0" bev="0" fileid="1" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="true" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="4" visitedSequencePoints="4" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663331</MetadataToken>
+              <Name>System.Void Xrm.Oss.FluentQuery.FluentLinkEntity::.ctor()</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="5" uspid="85" ordinal="0" offset="0" sl="199" sc="9" el="199" ec="34" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="5" uspid="86" ordinal="1" offset="7" sl="200" sc="9" el="200" ec="10" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="5" uspid="87" ordinal="2" offset="8" sl="201" sc="13" el="204" ec="15" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="5" uspid="88" ordinal="3" offset="31" sl="205" sc="9" el="205" ec="10" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="5" uspid="85" ordinal="0" offset="0" sl="199" sc="9" el="199" ec="34" bec="0" bev="0" fileid="1" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="4" visitedSequencePoints="4" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663333</MetadataToken>
+              <Name>Xrm.Oss.FluentQuery.IFluentLinkEntity Xrm.Oss.FluentQuery.FluentLinkEntity::Alias(System.String)</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="3" uspid="89" ordinal="0" offset="0" sl="216" sc="9" el="216" ec="10" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="3" uspid="90" ordinal="1" offset="1" sl="217" sc="13" el="217" ec="44" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="3" uspid="91" ordinal="2" offset="14" sl="219" sc="13" el="219" ec="25" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="3" uspid="92" ordinal="3" offset="18" sl="220" sc="9" el="220" ec="10" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="3" uspid="89" ordinal="0" offset="0" sl="216" sc="9" el="216" ec="10" bec="0" bev="0" fileid="1" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="4" visitedSequencePoints="4" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663334</MetadataToken>
+              <Name>Xrm.Oss.FluentQuery.IFluentLinkEntity Xrm.Oss.FluentQuery.FluentLinkEntity::FromAttribute(System.String)</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="3" uspid="93" ordinal="0" offset="0" sl="223" sc="9" el="223" ec="10" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="3" uspid="94" ordinal="1" offset="1" sl="224" sc="13" el="224" ec="63" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="3" uspid="95" ordinal="2" offset="14" sl="226" sc="13" el="226" ec="25" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="3" uspid="96" ordinal="3" offset="18" sl="227" sc="9" el="227" ec="10" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="3" uspid="93" ordinal="0" offset="0" sl="223" sc="9" el="223" ec="10" bec="0" bev="0" fileid="1" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="4" visitedSequencePoints="4" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663335</MetadataToken>
+              <Name>Xrm.Oss.FluentQuery.IFluentLinkEntity Xrm.Oss.FluentQuery.FluentLinkEntity::FromEntity(System.String)</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="3" uspid="97" ordinal="0" offset="0" sl="230" sc="9" el="230" ec="10" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="3" uspid="98" ordinal="1" offset="1" sl="231" sc="13" el="231" ec="57" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="3" uspid="99" ordinal="2" offset="14" sl="233" sc="13" el="233" ec="25" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="3" uspid="100" ordinal="3" offset="18" sl="234" sc="9" el="234" ec="10" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="3" uspid="97" ordinal="0" offset="0" sl="230" sc="9" el="230" ec="10" bec="0" bev="0" fileid="1" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="4" visitedSequencePoints="4" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663336</MetadataToken>
+              <Name>Xrm.Oss.FluentQuery.IFluentLinkEntity Xrm.Oss.FluentQuery.FluentLinkEntity::IncludeColumns(System.String[])</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="1" uspid="101" ordinal="0" offset="0" sl="237" sc="9" el="237" ec="10" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="102" ordinal="1" offset="1" sl="238" sc="13" el="238" ec="53" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="103" ordinal="2" offset="19" sl="240" sc="13" el="240" ec="25" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="104" ordinal="3" offset="23" sl="241" sc="9" el="241" ec="10" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="1" uspid="101" ordinal="0" offset="0" sl="237" sc="9" el="237" ec="10" bec="0" bev="0" fileid="1" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="6" visitedSequencePoints="6" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663337</MetadataToken>
+              <Name>Xrm.Oss.FluentQuery.IFluentLinkEntity Xrm.Oss.FluentQuery.FluentLinkEntity::Link(System.Action`1&lt;Xrm.Oss.FluentQuery.IFluentLinkEntity&gt;)</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="1" uspid="105" ordinal="0" offset="0" sl="244" sc="9" el="244" ec="10" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="106" ordinal="1" offset="1" sl="245" sc="13" el="245" ec="47" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="107" ordinal="2" offset="7" sl="247" sc="13" el="247" ec="30" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="108" ordinal="3" offset="15" sl="249" sc="13" el="249" ec="64" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="109" ordinal="4" offset="38" sl="251" sc="13" el="251" ec="25" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="110" ordinal="5" offset="42" sl="252" sc="9" el="252" ec="10" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="1" uspid="105" ordinal="0" offset="0" sl="244" sc="9" el="244" ec="10" bec="0" bev="0" fileid="1" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="4" visitedSequencePoints="4" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663338</MetadataToken>
+              <Name>Xrm.Oss.FluentQuery.IFluentLinkEntity Xrm.Oss.FluentQuery.FluentLinkEntity::LinkType(Microsoft.Xrm.Sdk.Query.JoinOperator)</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="1" uspid="111" ordinal="0" offset="0" sl="255" sc="9" el="255" ec="10" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="112" ordinal="1" offset="1" sl="256" sc="13" el="256" ec="53" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="113" ordinal="2" offset="14" sl="258" sc="13" el="258" ec="25" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="114" ordinal="3" offset="18" sl="259" sc="9" el="259" ec="10" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="1" uspid="111" ordinal="0" offset="0" sl="255" sc="9" el="255" ec="10" bec="0" bev="0" fileid="1" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="4" visitedSequencePoints="4" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663339</MetadataToken>
+              <Name>Xrm.Oss.FluentQuery.IFluentLinkEntity Xrm.Oss.FluentQuery.FluentLinkEntity::ToAttribute(System.String)</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="3" uspid="115" ordinal="0" offset="0" sl="262" sc="9" el="262" ec="10" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="3" uspid="116" ordinal="1" offset="1" sl="263" sc="13" el="263" ec="61" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="3" uspid="117" ordinal="2" offset="14" sl="265" sc="13" el="265" ec="25" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="3" uspid="118" ordinal="3" offset="18" sl="266" sc="9" el="266" ec="10" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="3" uspid="115" ordinal="0" offset="0" sl="262" sc="9" el="262" ec="10" bec="0" bev="0" fileid="1" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="4" visitedSequencePoints="4" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663340</MetadataToken>
+              <Name>Xrm.Oss.FluentQuery.IFluentLinkEntity Xrm.Oss.FluentQuery.FluentLinkEntity::ToEntity(System.String)</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="3" uspid="119" ordinal="0" offset="0" sl="269" sc="9" el="269" ec="10" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="3" uspid="120" ordinal="1" offset="1" sl="270" sc="13" el="270" ec="55" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="3" uspid="121" ordinal="2" offset="14" sl="272" sc="13" el="272" ec="25" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="3" uspid="122" ordinal="3" offset="18" sl="273" sc="9" el="273" ec="10" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="3" uspid="119" ordinal="0" offset="0" sl="269" sc="9" el="269" ec="10" bec="0" bev="0" fileid="1" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="3" visitedSequencePoints="3" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663341</MetadataToken>
+              <Name>Microsoft.Xrm.Sdk.Query.LinkEntity Xrm.Oss.FluentQuery.FluentLinkEntity::GetLinkEntity()</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="5" uspid="123" ordinal="0" offset="0" sl="276" sc="9" el="276" ec="10" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="5" uspid="124" ordinal="1" offset="1" sl="277" sc="13" el="277" ec="32" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="5" uspid="125" ordinal="2" offset="10" sl="278" sc="9" el="278" ec="10" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="5" uspid="123" ordinal="0" offset="0" sl="276" sc="9" el="276" ec="10" bec="0" bev="0" fileid="1" />
             </Method>
           </Methods>
         </Class>

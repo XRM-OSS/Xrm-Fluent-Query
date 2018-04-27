@@ -325,8 +325,9 @@ var assemblies = [
   {
     "name": "Xrm.Oss.FluentQuery",
     "classes": [
-      { "name": "Xrm.Oss.FluentQuery.FluentQuery`1", "reportPath": "Xrm.Oss.FluentQuery_FluentQuery_1.htm", "coveredLines": 66, "uncoveredLines": 0, "coverableLines": 66, "totalLines": 153, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 1, "totalBranches": 2, "lineCoverageHistory": [], "branchCoverageHistory": [] },
-      { "name": "Xrm.Oss.FluentQuery.IOrganizationServiceFluentQuery", "reportPath": "Xrm.Oss.FluentQuery_IOrganizationServiceFluentQuery.htm", "coveredLines": 3, "uncoveredLines": 3, "coverableLines": 6, "totalLines": 153, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [], "branchCoverageHistory": [] },
+      { "name": "Xrm.Oss.FluentQuery.FluentLinkEntity", "reportPath": "Xrm.Oss.FluentQuery_FluentLinkEntity.htm", "coveredLines": 47, "uncoveredLines": 0, "coverableLines": 47, "totalLines": 280, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [], "branchCoverageHistory": [] },
+      { "name": "Xrm.Oss.FluentQuery.FluentQuery`1", "reportPath": "Xrm.Oss.FluentQuery_FluentQuery_1.htm", "coveredLines": 76, "uncoveredLines": 0, "coverableLines": 76, "totalLines": 280, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 1, "totalBranches": 2, "lineCoverageHistory": [], "branchCoverageHistory": [] },
+      { "name": "Xrm.Oss.FluentQuery.IOrganizationServiceFluentQuery", "reportPath": "Xrm.Oss.FluentQuery_IOrganizationServiceFluentQuery.htm", "coveredLines": 3, "uncoveredLines": 3, "coverableLines": 6, "totalLines": 280, "coverageType": "LineCoverage", "methodCoverage": "-", "coveredBranches": 0, "totalBranches": 0, "lineCoverageHistory": [], "branchCoverageHistory": [] },
     ]},
 ];
 
