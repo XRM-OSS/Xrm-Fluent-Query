@@ -41,7 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FluentFilterExpressionTests.cs" />
     <Compile Include="FluentLinkEntityTests.cs" />
+    <Compile Include="FluentOrderExpressionTests.cs" />
     <Compile Include="FluentQueryTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
