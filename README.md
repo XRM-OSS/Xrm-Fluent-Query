@@ -15,9 +15,9 @@ All CRM versions from 2011 to 365 are supported, just include the one you need t
 QueryExpressions add nice IntelliSense, however they tend to be quite verbose, which leads to poor readability.
 This fluent interface aims to make queries as short and readable as possible while preserving IntelliSense.
 
-This could look something like this:
+This could look something like this (When not developing early bound, you can simply leave out the generic parameter):
 ```C#
-var records = service.Query("account")
+var records = service.Query<Account>("account")
                 .IncludeColumns("name")
                 .Where(e => e
                     .Attribute(a => a
@@ -35,6 +35,39 @@ var records = service.Query("account")
                 )
                 .RetrieveAll();
 ```
+
+The equivalent QueryExpression for above fluent query would be:
+```C#
+var query = new QueryExpression
+{
+	EntityName = "account",
+	ColumnSet = new ColumnSet("name"),
+	NoLock = true,
+	Criteria = new FilterExpression
+	{
+		Conditions =
+		{
+			new ConditionExpression("name", ConditionOperator.Equal, "Adventure Works")
+		}
+	},
+	LinkEntities =
+	{
+		new LinkEntity
+		{
+			LinkFromEntityName = "account",
+			LinkFromAttributeName = "primarycontactid",
+			LinkToEntityName = "contact",
+			LinkToAttributeName = "contactid"
+		}
+	}
+};
+
+var records = service.RetrieveMultiple(query).Entities.Select(e => e.ToEntity<Account>()).ToList();
+```
+
+I believe the fluent syntax to be much easier to understand at first glance. 
+
+In addition to that, it automatically casts your entity objects if you call it with the generic parameter and implements automatic retrieval of all pages.
 
 # How to build it
 If you want to build this library yourself, just call 
