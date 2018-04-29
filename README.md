@@ -1,4 +1,4 @@
-# XRM Fluent Query [![Build status](https://ci.appveyor.com/api/projects/status/x0o7dqnhnwi2i8bk?svg=true)](https://ci.appveyor.com/project/DigitalFlow/xrm-fluent-query)
+# XRM Fluent Query [![Build status](https://ci.appveyor.com/api/projects/status/x0o7dqnhnwi2i8bk?svg=true)](https://ci.appveyor.com/project/DigitalFlow/xrm-fluent-query) [![NuGet Badge](https://buildstats.info/nuget/Xrm.Oss.FluentQuery.Sources)](https://www.nuget.org/packages/Xrm.Oss.FluentQuery.Sources)
 
 |Line Coverage|Branch Coverage|
 |-----|-----------------|
