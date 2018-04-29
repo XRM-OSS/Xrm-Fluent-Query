@@ -18,8 +18,21 @@ This fluent interface aims to make queries as short and readable as possible whi
 This could look something like this:
 ```C#
 var records = service.Query("account")
-                .IncludeColumns("name", "address1_line1")
-		.With.UniqueRecords()
+                .IncludeColumns("name")
+                .Where(e => e
+                    .Attribute(a => a
+                        .Named("name")
+                        .Is(ConditionOperator.Equal)
+                        .To("Adventure Works")
+                    )
+                )
+                .Link(l => l
+                    .FromEntity("account")
+                    .FromAttribute("primarycontactid")
+                    .ToEntity("contact")
+                    .ToAttribute("contactid")
+                    .With.LinkType(JoinOperator.LeftOuter)
+                )
                 .RetrieveAll();
 ```
 

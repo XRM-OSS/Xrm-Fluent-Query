@@ -96,7 +96,10 @@ namespace Xrm.Oss.FluentQuery.Tests
 
             var records = service.Query("account")
                 .IncludeColumns("name", "address1_line1")
-                .With.PageInfo(new PagingInfo { PageNumber = 1, Count = 1})
+                .With.PagingInfo(p => p
+                    .PageNumber(1)
+                    .PageSize(1)
+                )
                 .RetrieveAll();
 
             Assert.That(records.Count, Is.EqualTo(2));
@@ -187,6 +190,57 @@ namespace Xrm.Oss.FluentQuery.Tests
                 .Expression;
 
             Assert.That(query.PageInfo.ReturnTotalRecordCount, Is.EqualTo(true));
+        }
+
+        [Test]
+        public void It_Should_Properly_Execute_Query()
+        {
+            var context = new XrmFakedContext();
+            var service = context.GetFakedOrganizationService();
+
+            var account = new Entity
+            {
+                Id = Guid.NewGuid(),
+                LogicalName = "account",
+                Attributes =
+                {
+                    { "name", "Adventure Works" }
+                }
+            };
+
+            var account2 = new Entity
+            {
+                Id = Guid.NewGuid(),
+                LogicalName = "account",
+                Attributes =
+                {
+                    { "name", "Contoso" },
+                }
+            };
+
+            context.Initialize(new[] { account, account2 });
+
+            var result = service.Query("account")
+                .IncludeColumns("name")
+                .Where(e => e
+                    .Attribute(a => a
+                        .Named("name")
+                        .Is(ConditionOperator.Equal)
+                        .To("Adventure Works")
+                    )
+                )
+                .Link(l => l
+                    .FromEntity("account")
+                    .FromAttribute("primarycontactid")
+                    .ToEntity("contact")
+                    .ToAttribute("contactid")
+                    .With.LinkType(JoinOperator.LeftOuter)
+                )
+                .Retrieve();
+            
+            Assert.That(result.Count, Is.EqualTo(1));
+            Assert.That(result[0].Id, Is.EqualTo(account.Id));
+            Assert.That(result[0].GetAttributeValue<string>("name"), Is.EqualTo("Adventure Works"));
         }
     }
 }

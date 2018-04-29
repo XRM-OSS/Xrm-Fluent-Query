@@ -10,6 +10,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{7E727FD8-3B56-4205-8EFD-99882AA46664}"
 	ProjectSection(SolutionItems) = preProject
 		build.fsx = build.fsx
+		paket.template = paket.template
 	EndProjectSection
 EndProject
 Global

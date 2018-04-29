@@ -44,6 +44,7 @@
     <Compile Include="FluentFilterExpressionTests.cs" />
     <Compile Include="FluentLinkEntityTests.cs" />
     <Compile Include="FluentOrderExpressionTests.cs" />
+    <Compile Include="FluentPagingInfoTests.cs" />
     <Compile Include="FluentQueryTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

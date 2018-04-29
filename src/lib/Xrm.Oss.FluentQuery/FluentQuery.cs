@@ -40,7 +40,7 @@ namespace Xrm.Oss.FluentQuery
         IFluentQuery<T> RecordCount(int? topCount);
         IFluentQuery<T> DatabaseLock(bool useLock = true);
         IFluentQuery<T> UniqueRecords(bool unique = true);
-        IFluentQuery<T> PageInfo(PagingInfo pageInfo);
+        IFluentQuery<T> PagingInfo(Action<IFluentPagingInfo> definition);
         IFluentQuery<T> TotalRecordCount(bool returnTotalRecordCount = true);
     }
 
@@ -54,11 +54,7 @@ namespace Xrm.Oss.FluentQuery
             _query = new QueryExpression
             {
                 EntityName = entityName,
-                NoLock = true,
-                PageInfo = new PagingInfo
-                {
-                    PageNumber = 1
-                }
+                NoLock = true
             };
 
             _service = service;
@@ -144,16 +140,9 @@ namespace Xrm.Oss.FluentQuery
             return this;
         }
 
-        public IFluentQuery<T> PageInfo(PagingInfo pageInfo)
+        public IFluentQuery<T> PagingInfo(PagingInfo PagingInfo)
         {
-            _query.PageInfo = pageInfo;
-
-            return this;
-        }
-
-        public IFluentQuery<T> TotalRecordCount(bool returnTotalRecordCount = true)
-        {
-            _query.PageInfo.ReturnTotalRecordCount = returnTotalRecordCount;
+            _query.PageInfo = PagingInfo;
 
             return this;
         }
@@ -187,6 +176,29 @@ namespace Xrm.Oss.FluentQuery
             definition(order);
             
             _query.Orders.Add(order.GetOrder());
+
+            return this;
+        }
+
+        public IFluentQuery<T> PagingInfo(Action<IFluentPagingInfo> definition)
+        {
+            var PagingInfo = new FluentPagingInfo();
+
+            definition(PagingInfo);
+
+            _query.PageInfo = PagingInfo.GetPagingInfo();
+
+            return this;
+        }
+
+        public IFluentQuery<T> TotalRecordCount(bool returnTotalRecordCount = true)
+        {
+            if (_query.PageInfo == null)
+            {
+                _query.PageInfo = new PagingInfo();
+            }
+
+            _query.PageInfo.ReturnTotalRecordCount = true;
 
             return this;
         }
@@ -390,6 +402,8 @@ namespace Xrm.Oss.FluentQuery
         IFluentConditionExpression Is(ConditionOperator conditionOperator);
         IFluentConditionExpression Value(object value);
         IFluentConditionExpression Value(params object[] value);
+        IFluentConditionExpression To(object value);
+        IFluentConditionExpression To(params object[] value);
     }
 
     public class FluentConditionExpression : IFluentConditionExpression
@@ -420,6 +434,16 @@ namespace Xrm.Oss.FluentQuery
             _condition.EntityName = entityName;
 
             return this;
+        }
+
+        public IFluentConditionExpression To(object value)
+        {
+            return Value(value);
+        }
+
+        public IFluentConditionExpression To(params object[] value)
+        {
+            return Value(value);
         }
 
         public IFluentConditionExpression Value(object value)
@@ -482,6 +506,57 @@ namespace Xrm.Oss.FluentQuery
         internal OrderExpression GetOrder()
         {
             return _order;
+        }
+    }
+
+    public interface IFluentPagingInfo
+    {
+        IFluentPagingInfo PageNumber(int number);
+        IFluentPagingInfo PagingCookie(string pagingCookie);
+        IFluentPagingInfo PageSize(int number);
+        IFluentPagingInfo ReturnTotalRecordCount(bool returnTotal = true);
+    }
+
+    public class FluentPagingInfo : IFluentPagingInfo
+    {
+        private PagingInfo _pagingInfo;
+
+        public FluentPagingInfo()
+        {
+            _pagingInfo = new PagingInfo();
+        }
+
+        public IFluentPagingInfo PageNumber(int number)
+        {
+            _pagingInfo.PageNumber = number;
+
+            return this;
+        }
+
+        public IFluentPagingInfo PageSize(int number)
+        {
+            _pagingInfo.Count = number;
+
+            return this;
+        }
+
+        public IFluentPagingInfo PagingCookie(string pagingCookie)
+        {
+            _pagingInfo.PagingCookie = pagingCookie;
+
+            return this;
+        }
+
+        public IFluentPagingInfo ReturnTotalRecordCount(bool returnTotal = true)
+        {
+            _pagingInfo.ReturnTotalRecordCount = returnTotal;
+
+            return this;
+        }
+
+        public PagingInfo GetPagingInfo()
+        {
+            return _pagingInfo;
         }
     }
 }
