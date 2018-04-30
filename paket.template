@@ -7,9 +7,9 @@ title
 tags
     Xrm Dynamics CRM 365 QueryExpression Query DSL OrganizationService
 projectUrl
-    https://github.com/DigitalFlow/Xrm-FluentQuery
+    https://github.com/DigitalFlow/Xrm-Fluent-Query
 licenseUrl
-    https://github.com/DigitalFlow/Xrm-FluentQuery/blob/master/LICENSE
+    https://github.com/DigitalFlow/Xrm-Fluent-Query/blob/master/LICENSE
 description
     A Dynamics CRM / Dynamics 365 library for fluent IOrganizationService queries
 files
