@@ -38,6 +38,45 @@ namespace Xrm.Oss.FluentQuery.Tests
         }
 
         [Test]
+        public void It_Should_Properly_Set_Value_Arrays()
+        {
+            var context = new XrmFakedContext();
+            var service = context.GetFakedOrganizationService();
+
+            var values = new[] { "name1", "name2" };
+
+            var query = service.Query("account")
+                .Where(e => e
+                    .Attribute(a => a
+                        .Of("contact")
+                        .Named("name")
+                        .Is(ConditionOperator.In)
+                        .Value(values)
+                    )
+                    .Attribute(a => a
+                        .Of("contact")
+                        .Named("name")
+                        .Is(ConditionOperator.In)
+                        .To(values)
+                    )
+                    .With.Operator(LogicalOperator.And)
+                )
+                .Expression;
+
+            Assert.That(query.Criteria.FilterOperator, Is.EqualTo(LogicalOperator.And));
+
+            Assert.That(query.Criteria.Conditions[0].EntityName, Is.EqualTo("contact"));
+            Assert.That(query.Criteria.Conditions[0].AttributeName, Is.EqualTo("name"));
+            Assert.That(query.Criteria.Conditions[0].Operator, Is.EqualTo(ConditionOperator.In));
+            Assert.That(query.Criteria.Conditions[0].Values, Is.EqualTo(values));
+
+            Assert.That(query.Criteria.Conditions[1].EntityName, Is.EqualTo("contact"));
+            Assert.That(query.Criteria.Conditions[1].AttributeName, Is.EqualTo("name"));
+            Assert.That(query.Criteria.Conditions[1].Operator, Is.EqualTo(ConditionOperator.In));
+            Assert.That(query.Criteria.Conditions[1].Values, Is.EqualTo(values));
+        }
+
+        [Test]
         public void It_Should_Properly_Set_Nested_Filter()
         {
             var context = new XrmFakedContext();

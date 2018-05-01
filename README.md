@@ -17,7 +17,7 @@ This fluent interface aims to make queries as short and readable as possible whi
 
 This could look something like this (When not developing early bound, you can simply leave out the generic parameter):
 ```C#
-var records = service.Query<Account>("account")
+var records = service.Query<Account>()
                 .IncludeColumns("name")
                 .Where(e => e
                     .Attribute(a => a

@@ -1,20 +1,71 @@
-﻿using Microsoft.Xrm.Sdk;
+﻿/**
+MIT License
+
+Copyright (c) 2018 Florian Krönert
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+*/
+
+using Microsoft.Xrm.Sdk;
 using Microsoft.Xrm.Sdk.Query;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Xrm.Oss.FluentQuery
 {
     public static class IOrganizationServiceFluentQuery
     {
-        public static IFluentQuery<T> Query<T>(this IOrganizationService service, string entityName) where T : Entity
+        /**
+         * <summary>
+         * Creates a new fluent query for your early bound entity of type T, while automatically using the entity name of type T. Results will also be of type T.
+         * If developing late bound, use the non-generic Query function.
+         * </summary>
+         * <returns>Fluent Query object. Use Retrieve or RetrieveAll for getting the results.</returns>
+         */
+        public static IFluentQuery<T> Query<T>(this IOrganizationService service) where T : Entity, new()
+        {
+            return new FluentQuery<T>(new T().LogicalName, service);
+        }
+
+        /**
+         * <summary>
+         * Creates a new fluent query for your early bound entity of type T, while automatically using the entity name of type T. Results will also be of type T.
+         * If developing late bound, use the non-generic Query function.
+         * </summary>
+         * <param name="entityName">The logical name of the entity you want to query.</param>
+         * <returns>Fluent Query object. Use Retrieve or RetrieveAll for getting the results.</returns>
+         */
+        [Obsolete("Entity name is no longer needed for early bound queries, use the parameterless overload. For late bound queries, use the non generic overload.")]
+        public static IFluentQuery<T> Query<T>(this IOrganizationService service, string entityName) where T : Entity, new()
         {
             return new FluentQuery<T>(entityName, service);
         }
 
+        /**
+         * <summary>
+         * Creates a new fluent query in late binding style. Results will be of type Entity.
+         * If developing early bound, use the generic Query function.
+         * </summary>
+         * <param name="entityName">The logical name of the entity you want to query.</param>
+         * <returns>Fluent Query object. Use Retrieve or RetrieveAll for getting the results.</returns>
+         */
         public static IFluentQuery<Entity> Query(this IOrganizationService service, string entityName)
         {
             return new FluentQuery<Entity>(entityName, service);
@@ -23,24 +74,112 @@ namespace Xrm.Oss.FluentQuery
 
     public interface IFluentQuery<T> where T : Entity
     {
+        /**
+         * <summary>
+         * Adds the given columns to your query. Multiple calls will just add to the existing columns.
+         * </summary>
+         * <param name="columns">Params array of your columns.</param>
+         */
         IFluentQuery<T> IncludeColumns(params string[] columns);
+
+        /**
+         * <summary>
+         * Returns the Query Expression that represents the current fluent query.
+         * </summary>
+         */
         QueryExpression Expression { get; }
+
+        /**
+         * <summary>
+         * Retrieves the first page for your query.
+         * </summary>
+         * <returns>Records retrieved from your query.</returns>
+         */
         List<T> Retrieve();
+
+        /**
+         * <summary>
+         * Retrieves all pages for your query.
+         * </summary>
+         * <returns>Records retrieved from your query.</returns>
+         */
         List<T> RetrieveAll();
 
+        /**
+         * <summary>
+         * Use this for setting further options in your query.
+         * </summary>
+         */
         IFluentQuerySetting<T> With { get; }
 
+        /**
+         * <summary>
+         * Adds a link to a connected entity.
+         * </summary> 
+         * <param name="definition">Action for setting the link properties. Use a lambda for readability.</param>
+         */
         IFluentQuery<T> Link(Action<IFluentLinkEntity> definition);
+
+        /**
+         * <summary>
+         * Adds filter conditions to your query.
+         * </summary> 
+         * <remarks>Multiple calls to this method currently override the existing filter.</remarks>
+         * <param name="definition">Action for setting the filter properties. Use a lambda for readability.</param>
+         */
         IFluentQuery<T> Where(Action<IFluentFilterExpression> definition);
+
+        /**
+         * <summary>
+         * Adds an order expression to your query.
+         * </summary> 
+         * <param name="definition">Action for setting the order properties. Use a lambda for readability.</param>
+         */
         IFluentQuery<T> Order(Action<IFluentOrderExpression> definition);
     }
 
     public interface IFluentQuerySetting<T> where T : Entity
     {
+        /**
+         * <summary>
+         * Set this for defining how many records you want to retrieve. The first top X records will be retrieved.
+         * </summary>
+         * <param name="topCount">Top X count of records to retrieve</param>
+         */
         IFluentQuery<T> RecordCount(int? topCount);
+
+        /**
+         * <summary>
+         * Defines whether the record should be locked for retrieval. Not locking is a recommended best practice, but might lead to dirty reads.
+         * </summary>
+         * <remarks>Default of true is recommended as best practice. Dirty reads might occur if data is written to this record simultaneously. Turn off if you know what you're doing.</remarks>
+         * <param name="useLock">True for locking the database record for retrieval, false otherwise.</param>
+         */
         IFluentQuery<T> DatabaseLock(bool useLock = true);
+
+        /**
+         * <summary>
+         * Specifies whether duplicate records in your query will be filtered out or not.
+         * </summary>
+         * <param name="unique">True for only returning unique records, false otherwise</param>
+         */
         IFluentQuery<T> UniqueRecords(bool unique = true);
+
+        /**
+         * <summary>
+         * Adds paging info to your query, such as page size, page number or paging cookie.
+         * </summary>
+         * <remarks>Use retrieve all for automatic retrieval of all records using paging.</remarks>
+         * <param name="definition">Action for setting the paging info properties. Use a lambda for readability.</param>
+         */
         IFluentQuery<T> PagingInfo(Action<IFluentPagingInfo> definition);
+
+        /**
+         * <summary>
+         * Specifies whether the total record count of your query results should be retrieved.
+         * </summary>
+         * <param name="returnTotalRecordCount">True for returning total record count, false otherwise.</param>
+         */
         IFluentQuery<T> TotalRecordCount(bool returnTotalRecordCount = true);
     }
 
@@ -62,11 +201,6 @@ namespace Xrm.Oss.FluentQuery
 
         public IFluentQuery<T> IncludeColumns(params string[] columns)
         {
-            if(_query.ColumnSet == null)
-            {
-                _query.ColumnSet = new ColumnSet();
-            }
-
             _query.ColumnSet.AddColumns(columns);
 
             return this;
@@ -140,13 +274,6 @@ namespace Xrm.Oss.FluentQuery
             return this;
         }
 
-        public IFluentQuery<T> PagingInfo(PagingInfo PagingInfo)
-        {
-            _query.PageInfo = PagingInfo;
-
-            return this;
-        }
-
         public IFluentQuery<T> Link(Action<IFluentLinkEntity> definition)
         {
             var link = new FluentLinkEntity();
@@ -193,11 +320,6 @@ namespace Xrm.Oss.FluentQuery
 
         public IFluentQuery<T> TotalRecordCount(bool returnTotalRecordCount = true)
         {
-            if (_query.PageInfo == null)
-            {
-                _query.PageInfo = new PagingInfo();
-            }
-
             _query.PageInfo.ReturnTotalRecordCount = true;
 
             return this;
@@ -214,22 +336,85 @@ namespace Xrm.Oss.FluentQuery
 
     public interface IFluentLinkEntity
     {
+        /**
+         * <summary>
+         * Logical name of entity that the link is created from.
+         * </summary>
+         * <param name="entityName">Entity Logical Name</param>
+         */
         IFluentLinkEntity FromEntity(string entityName);
+
+        /**
+         * <summary>
+         * Logical name of attribute that the link is created from.
+         * </summary>
+         * <param name="attributeName">Attribute Logical Name</param>
+         */
         IFluentLinkEntity FromAttribute(string attributeName);
+
+        /**
+         * <summary>
+         * Logical name of entity that the link is created to.
+         * </summary>
+         * <param name="entityName">Entity Logical Name</param>
+         */
         IFluentLinkEntity ToEntity(string entityName);
+
+        /**
+         * <summary>
+         * Logical name of attribute that the link is created to.
+         * </summary>
+         * <param name="attributeName">Attribute Logical Name</param>
+         */
         IFluentLinkEntity ToAttribute(string attributeName);
 
+        /**
+         * <summary>
+         * Adds the given columns to the link entity. Multiple calls will just add to the existing columns.
+         * </summary>
+         * <param name="columns">Params array of your columns.</param>
+         */
         IFluentLinkEntity IncludeColumns(params string[] columns);
 
+        /**
+        * <summary>
+        * Use this for setting further options of your link.
+        * </summary>
+        */
         IFluentLinkEntitySetting With { get; }
 
+        /**
+         * <summary>
+         * Adds a nested link to this link.
+         * </summary>
+         * <param name="definition">Action for setting the link properties. Use a lambda for readability.</param>
+         */
         IFluentLinkEntity Link(Action<IFluentLinkEntity> definition);
+
+        /**
+         * <summary>
+         * Adds filter conditions to your link.
+         * </summary> 
+         * <remarks>Multiple calls to this method currently override the existing filter.</remarks>
+         * <param name="definition">Action for setting the filter properties. Use a lambda for readability.</param>
+         */
         IFluentLinkEntity Where(Action<IFluentFilterExpression> definition);
     }
 
     public interface IFluentLinkEntitySetting
     {
+        /**
+         * <summary>
+         * Sets an alias for the results of this link entity.
+         * </summary>
+         * <param name="name">Alias to set in results.</param>
+         */
         IFluentLinkEntity Alias(string name);
+
+        /**
+         * <summary>Join type of this link.</summary>
+         * <param name="joinOperator">Join type to use.</param>
+         */
         IFluentLinkEntity LinkType(JoinOperator joinOperator);
     }
 
@@ -332,14 +517,39 @@ namespace Xrm.Oss.FluentQuery
 
     public interface IFluentFilterExpression
     {
+        /**
+        * <summary>
+        * Use this for setting further options of your filter.
+        * </summary>
+        */
         IFluentFilterExpressionSetting With { get; }
 
+        /**
+        * <summary>
+        * Use this for adding a condition on an attribute to your filter.
+        * </summary>
+        * <remarks>Multiple calls to Attribute will add to the existing ones.</remarks>
+        * <param name="definition">Action for setting the attribute properties. Use a lambda for readability.</param>
+        */
         IFluentFilterExpression Attribute(Action<IFluentConditionExpression> definition);
+
+        /**
+         * <summary>
+         * Adds nested filter conditions to your filter.
+         * </summary> 
+         * <remarks>Multiple calls to this method add to the existing filter conditions.</remarks>
+         * <param name="definition">Action for setting the filter properties. Use a lambda for readability.</param>
+         */
         IFluentFilterExpression Where(Action<IFluentFilterExpression> definition);
     }
 
     public interface IFluentFilterExpressionSetting
     {
+        /**
+         * <summary>
+         * Sets the logical operator for chaining multiple conditions in this filter.
+         * </summary>
+         */
         IFluentFilterExpression Operator(LogicalOperator filterOperator);
     }
 
@@ -397,12 +607,62 @@ namespace Xrm.Oss.FluentQuery
 
     public interface IFluentConditionExpression
     {
+        /**
+         * <summary>
+         * Set the entity name that your condition attribute targets, if it is not the main entity.
+         * </summary>
+         * <param name="entityName">Entity Logical Name</param>
+         */
         IFluentConditionExpression Of(string entityName);
+
+        /**
+         * <summary>
+         * Set the logical name of the attribute that your condition targets.
+         * </summary>
+         * <param name="attributeName">Attribute logical name</param>
+         */
         IFluentConditionExpression Named(string attributeName);
+
+        /**
+         * <summary>
+         * Set the condition operator for your condition.
+         * </summary>
+         * <param name="conditionOperator">Condition Operator Enum</param>
+         */
         IFluentConditionExpression Is(ConditionOperator conditionOperator);
+
+        /**
+         * <summary>
+         * Sets the value for the condition.
+         * </summary>
+         * <param name="value">Single object, use object array overload if necessary.</param>
+         */
         IFluentConditionExpression Value(object value);
+
+        /**
+         * <summary>
+         * Sets the values for the condition.
+         * </summary>
+         * <param name="value">Object array, use object overload if necessary.</param>
+         */
         IFluentConditionExpression Value(params object[] value);
+
+        /**
+         * <summary>
+         * Alias for Value, provides better readability on Equal conditions.
+         * Sets the value for the condition.
+         * </summary>
+         * <param name="value">Single object, use object array overload if necessary.</param>
+         */
         IFluentConditionExpression To(object value);
+
+        /**
+         * <summary>
+         * Alias for Value, provides better readability on Equal conditions.
+         * Sets the values for the condition.
+         * </summary>
+         * <param name="value">Object array, use object overload if necessary.</param>
+         */
         IFluentConditionExpression To(params object[] value);
     }
 
@@ -468,8 +728,26 @@ namespace Xrm.Oss.FluentQuery
 
     public interface IFluentOrderExpression
     {
+        /**
+         * <summary>
+         * Set the attribute name to order by.
+         * </summary>
+         * <param name="attributeName">Attribute logical name</param>
+         */
         IFluentOrderExpression By(string attributeName);
+
+        /**
+         * <summary>
+         * Sets the sort order to be ascending.
+         * </summary>
+         */
         IFluentOrderExpression Ascending();
+
+        /**
+         * <summary>
+         * Sets the sort order to be descending.
+         * </summary>
+         */
         IFluentOrderExpression Descending();
     }
 
@@ -511,9 +789,37 @@ namespace Xrm.Oss.FluentQuery
 
     public interface IFluentPagingInfo
     {
+        /**
+         * <summary>
+         * Set the page number to retrieve. Is set to 1 by default.
+         * </summary>
+         * <param name="number">Number of the page, starts at 1.</param>
+         */
         IFluentPagingInfo PageNumber(int number);
+
+        /**
+         * <summary>
+         * Set the paging cookie for retrieving records from pages after the first.
+         * </summary>
+         * <remarks>Use retrieve all for automatic retrieval of all records using paging.</remarks>
+         * <param name="pagingCookie">Paging cookie retrieved during last query response.</param>
+         */
         IFluentPagingInfo PagingCookie(string pagingCookie);
+
+        /**
+         * <summary>
+         * Set the size of each page.
+         * </summary>
+         * <param name="number">Number of records to return per page.</param>
+         */
         IFluentPagingInfo PageSize(int number);
+
+        /**
+         * <summary>
+         * Specifies whether the total record count of your query results should be retrieved.
+         * </summary>
+         * <param name="returnTotal">True for returning total record count, false otherwise.</param>
+         */
         IFluentPagingInfo ReturnTotalRecordCount(bool returnTotal = true);
     }
 
@@ -523,7 +829,10 @@ namespace Xrm.Oss.FluentQuery
 
         public FluentPagingInfo()
         {
-            _pagingInfo = new PagingInfo();
+            _pagingInfo = new PagingInfo
+            {
+                PageNumber = 1
+            };
         }
 
         public IFluentPagingInfo PageNumber(int number)

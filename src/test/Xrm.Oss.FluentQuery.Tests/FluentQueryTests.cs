@@ -14,6 +14,13 @@ namespace Xrm.Oss.FluentQuery.Tests
     [TestFixture]
     public class FluentQueryTests
     {
+        private class Account : Entity
+        {
+            public Account() : base("account")
+            {
+            }
+        }
+
         [Test]
         public void It_Should_Set_Entity_Name()
         {
@@ -21,6 +28,32 @@ namespace Xrm.Oss.FluentQuery.Tests
             var service = context.GetFakedOrganizationService();
 
             var query = service.Query("account")
+                .IncludeColumns("name", "address1_line1")
+                .Expression;
+
+            Assert.That(query.EntityName, Is.EqualTo("account"));
+        }
+
+        [Test]
+        public void It_Should_Set_Entity_Name_On_Generic_With_Parameter()
+        {
+            var context = new XrmFakedContext();
+            var service = context.GetFakedOrganizationService();
+
+            var query = service.Query<Account>("account")
+                .IncludeColumns("name", "address1_line1")
+                .Expression;
+
+            Assert.That(query.EntityName, Is.EqualTo("account"));
+        }
+
+        [Test]
+        public void It_Should_Set_Entity_Name_On_Early_Binding_Automatically()
+        {
+            var context = new XrmFakedContext();
+            var service = context.GetFakedOrganizationService();
+
+            var query = service.Query<Account>()
                 .IncludeColumns("name", "address1_line1")
                 .Expression;
 
@@ -190,6 +223,21 @@ namespace Xrm.Oss.FluentQuery.Tests
                 .Expression;
 
             Assert.That(query.PageInfo.ReturnTotalRecordCount, Is.EqualTo(true));
+        }
+
+        [Test]
+        public void It_Should_Set_Paging_Info()
+        {
+            var context = new XrmFakedContext();
+            var service = context.GetFakedOrganizationService();
+
+            var query = service.Query("account")
+                .With.PagingInfo(p => p
+                    .PageNumber(1)
+                )
+                .Expression;
+
+            Assert.That(query.PageInfo.PageNumber, Is.EqualTo(1));
         }
 
         [Test]
