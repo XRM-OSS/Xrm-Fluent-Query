@@ -14,6 +14,7 @@ All CRM versions from 2011 to 365 are supported, just include the one you need t
 # Remarks
 This library sets the NoLock parameter on your QueryExpressions to true by default (plain QueryExpressions don't).
 This is a recommended best practice, as otherwise the records would be locked in the database before retrieval, which might result in decreased performance.
+Not locking the data before retrieval might result in dirty reads however, if the record has an update transaction executing at the same time.
 There's also a limit of how much concurrent locked queries can run concurrently. Find out more about NoLock [here](https://msdn.microsoft.com/en-us/library/microsoft.xrm.sdk.query.queryexpression.nolock.aspx).
 
 If you choose to lock the data for retrieval, set `service.With.DataBaseLock()`.
