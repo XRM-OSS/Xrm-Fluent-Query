@@ -94,6 +94,39 @@ namespace Xrm.Oss.FluentQuery.Tests
         }
 
         [Test]
+        public void It_Should_Add_All_Columns()
+        {
+            var context = new XrmFakedContext();
+
+            var testName = "Adventure Works";
+            var testAddress = "Somewhere over the rainbow";
+
+            var account = new Entity
+            {
+                Id = Guid.NewGuid(),
+                LogicalName = "account",
+                Attributes =
+                {
+                    { "name", testName },
+                    { "address1_line1", testAddress }
+                }
+            };
+            context.Initialize(new[] { account });
+
+            var service = context.GetFakedOrganizationService();
+
+            var records = service.Query("account")
+                .IncludeAllColumns()
+                .Retrieve();
+
+            Assert.That(records.Count, Is.EqualTo(1));
+
+            var record = records.Single();
+            Assert.That(record.GetAttributeValue<string>("name"), Is.EqualTo(testName));
+            Assert.That(record.GetAttributeValue<string>("address1_line1"), Is.EqualTo(testAddress));
+        }
+
+        [Test]
         public void It_Should_Retrieve_All()
         {
             var context = new XrmFakedContext();
@@ -289,6 +322,97 @@ namespace Xrm.Oss.FluentQuery.Tests
             Assert.That(result.Count, Is.EqualTo(1));
             Assert.That(result[0].Id, Is.EqualTo(account.Id));
             Assert.That(result[0].GetAttributeValue<string>("name"), Is.EqualTo("Adventure Works"));
+        }
+
+        [Test]
+        public void It_Should_Add_Condition_Post_Creation()
+        {
+            var context = new XrmFakedContext();
+            var service = context.GetFakedOrganizationService();
+
+            var query = service.Query("account");
+
+            query.AddCondition(c => c
+                .Named("emailaddress1")
+                .Is(ConditionOperator.NotNull)
+            );
+
+            var expression = query.Expression;
+
+            Assert.That(expression.Criteria.Conditions[0].AttributeName, Is.EqualTo("emailaddress1"));
+            Assert.That(expression.Criteria.Conditions[0].Operator, Is.EqualTo(ConditionOperator.NotNull));
+        }
+
+        [Test]
+        public void It_Should_Add_Filter_Post_Creation()
+        {
+            var context = new XrmFakedContext();
+            var service = context.GetFakedOrganizationService();
+
+            var query = service.Query("account")
+                .Where(e => e
+                    .Attribute(a => a
+                        .Of("contact")
+                        .Named("name")
+                        .Is(ConditionOperator.Equal)
+                        .Value("Test")
+                    )
+                    .With.Operator(LogicalOperator.And)
+                );
+
+            query.AddFilter(f => f
+                .Attribute(a => a
+                    .Named("emailaddress1")
+                    .Is(ConditionOperator.NotNull)
+                )
+            );
+
+            var expression = query.Expression;
+
+            Assert.That(expression.Criteria.FilterOperator, Is.EqualTo(LogicalOperator.And));
+            Assert.That(expression.Criteria.Conditions[0].EntityName, Is.EqualTo("contact"));
+            Assert.That(expression.Criteria.Conditions[0].AttributeName, Is.EqualTo("name"));
+            Assert.That(expression.Criteria.Conditions[0].Operator, Is.EqualTo(ConditionOperator.Equal));
+            Assert.That(expression.Criteria.Conditions[0].Values, Is.EqualTo(new[] { "Test" }));
+
+            Assert.That(expression.Criteria.Filters[0].Conditions[0].AttributeName, Is.EqualTo("emailaddress1"));
+            Assert.That(expression.Criteria.Filters[0].Conditions[0].Operator, Is.EqualTo(ConditionOperator.NotNull));
+        }
+
+        [Test]
+        public void It_Should_Add_Top_Level_Filter_Post_Creation()
+        {
+            var context = new XrmFakedContext();
+            var service = context.GetFakedOrganizationService();
+
+            var query = service.Query("account")
+                .Where(e => e
+                    .Attribute(a => a
+                        .Of("contact")
+                        .Named("name")
+                        .Is(ConditionOperator.Equal)
+                        .Value("Test")
+                    )
+                    .With.Operator(LogicalOperator.And)
+                );
+
+            query.AddFilter(f => f
+                .Attribute(a => a
+                    .Named("emailaddress1")
+                    .Is(ConditionOperator.NotNull)
+                )
+            );
+
+            var expression = query.Expression;
+
+            Assert.That(expression.Criteria.FilterOperator, Is.EqualTo(LogicalOperator.And));
+            Assert.That(expression.Criteria.Conditions[0].EntityName, Is.EqualTo("contact"));
+            Assert.That(expression.Criteria.Conditions[0].AttributeName, Is.EqualTo("name"));
+            Assert.That(expression.Criteria.Conditions[0].Operator, Is.EqualTo(ConditionOperator.Equal));
+            Assert.That(expression.Criteria.Conditions[0].Values, Is.EqualTo(new[] { "Test" }));
+
+            Assert.That(expression.Criteria.Filters[0].Conditions[0].AttributeName, Is.EqualTo("emailaddress1"));
+            Assert.That(expression.Criteria.Filters[0].Conditions[0].Operator, Is.EqualTo(ConditionOperator.NotNull));
         }
     }
 }

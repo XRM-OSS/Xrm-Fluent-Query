@@ -84,6 +84,13 @@ namespace Xrm.Oss.FluentQuery
 
         /**
          * <summary>
+         * Adds all columns to the query. This is disadvised, specify the columns you need if possible.
+         * </summary>
+         */
+        IFluentQuery<T> IncludeAllColumns();
+
+        /**
+         * <summary>
          * Returns the Query Expression that represents the current fluent query.
          * </summary>
          */
@@ -128,6 +135,22 @@ namespace Xrm.Oss.FluentQuery
          * <param name="definition">Action for setting the filter properties. Use a lambda for readability.</param>
          */
         IFluentQuery<T> Where(Action<IFluentFilterExpression> definition);
+
+        /**
+         * <summary>
+         * Adds another condition to the top level filter expression.
+         * </summary>
+         * <param name="definition">The condition expression to add.</param>
+         */
+        void AddCondition(Action<IFluentConditionExpression> definition);
+
+        /**
+         * <summary>
+         * Adds a child filter to your top level filter.
+         * </summary> 
+         * <param name="definition">Action for setting the filter properties. Use a lambda for readability.</param>
+         */
+        void AddFilter(Action<IFluentFilterExpression> definition);
 
         /**
          * <summary>
@@ -201,7 +224,15 @@ namespace Xrm.Oss.FluentQuery
 
         public IFluentQuery<T> IncludeColumns(params string[] columns)
         {
+            _query.ColumnSet.AllColumns = false;
             _query.ColumnSet.AddColumns(columns);
+
+            return this;
+        }
+
+        public IFluentQuery<T> IncludeAllColumns()
+        {
+            _query.ColumnSet.AllColumns = true;
 
             return this;
         }
@@ -294,6 +325,24 @@ namespace Xrm.Oss.FluentQuery
             _query.Criteria = filter.GetFilter();
 
             return this;
+        }
+
+        public void AddCondition(Action<IFluentConditionExpression> definition)
+        {
+            var condition = new FluentConditionExpression();
+
+            definition(condition);
+
+            _query.Criteria.AddCondition(condition.GetCondition());
+        }
+
+        public void AddFilter(Action<IFluentFilterExpression> definition)
+        {
+            var filter = new FluentFilterExpression();
+
+            definition(filter);
+
+            _query.Criteria.AddFilter(filter.GetFilter());
         }
 
         public IFluentQuery<T> Order(Action<IFluentOrderExpression> definition)

@@ -11,6 +11,13 @@ This library can be used in CRM Plugins / Workflow Activities and in code of ext
 It does not include references / dependencies to any CRM SDK, so you can just install it and choose the CRM SDK that you need yourself.
 All CRM versions from 2011 to 365 are supported, just include the one you need to your project.
 
+# Remarks
+This library sets the NoLock parameter on your QueryExpressions to true by default (plain QueryExpressions don't).
+This is a recommended best practice, as otherwise the records would be locked in the database before retrieval, which might result in decreased performance.
+There's also a limit of how much concurrent locked queries can run concurrently. Find out more about NoLock [here](https://msdn.microsoft.com/en-us/library/microsoft.xrm.sdk.query.queryexpression.nolock.aspx).
+
+If you choose to lock the data for retrieval, set `service.With.DataBaseLock()`.
+
 # Purpose
 QueryExpressions add nice IntelliSense, however they tend to be quite verbose, which leads to poor readability.
 This fluent interface aims to make queries as short and readable as possible while preserving IntelliSense.
@@ -18,7 +25,7 @@ This fluent interface aims to make queries as short and readable as possible whi
 This could look something like this (When not developing early bound, you can simply leave out the generic parameter):
 ```C#
 var records = service.Query<Account>()
-                .IncludeColumns("name")
+                .IncludeColumns("name", "address1_line1")
                 .Where(e => e
                     .Attribute(a => a
                         .Named("name")
@@ -41,7 +48,7 @@ The equivalent QueryExpression for above fluent query would be:
 var query = new QueryExpression
 {
 	EntityName = "account",
-	ColumnSet = new ColumnSet("name"),
+	ColumnSet = new ColumnSet("name", "address1_line1"),
 	NoLock = true,
 	Criteria = new FilterExpression
 	{
