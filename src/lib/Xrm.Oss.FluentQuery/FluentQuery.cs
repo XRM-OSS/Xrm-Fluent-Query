@@ -694,7 +694,7 @@ namespace Xrm.Oss.FluentQuery
          * </summary>
          * <param name="value">Object array, use object overload if necessary.</param>
          */
-        IFluentConditionExpression Value(params object[] value);
+        IFluentConditionExpression Values(params object[] value);
 
         /**
          * <summary>
@@ -712,7 +712,7 @@ namespace Xrm.Oss.FluentQuery
          * </summary>
          * <param name="value">Object array, use object overload if necessary.</param>
          */
-        IFluentConditionExpression To(params object[] value);
+        IFluentConditionExpression ToMany(params object[] value);
     }
 
     public class FluentConditionExpression : IFluentConditionExpression
@@ -750,9 +750,9 @@ namespace Xrm.Oss.FluentQuery
             return Value(value);
         }
 
-        public IFluentConditionExpression To(params object[] value)
+        public IFluentConditionExpression ToMany(params object[] value)
         {
-            return Value(value);
+            return Values(value);
         }
 
         public IFluentConditionExpression Value(object value)
@@ -762,7 +762,7 @@ namespace Xrm.Oss.FluentQuery
             return this;
         }
 
-        public IFluentConditionExpression Value(params object[] value)
+        public IFluentConditionExpression Values(params object[] value)
         {
             _condition.Values.AddRange(value);
 
