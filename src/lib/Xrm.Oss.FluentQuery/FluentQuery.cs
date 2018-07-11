@@ -199,6 +199,16 @@ namespace Xrm.Oss.FluentQuery
 
         /**
          * <summary>
+         * Determines whether to use a paging cookie when retrieving all records with paging. Speeds up retrieval, but may loose to result loss if you're adding link entities.
+         * More on this topic: https://truenorthit.co.uk/2014/07/19/dynamics-crm-paging-cookies-some-gotchas/
+         * </summary>
+         * <remarks>Paging Cookies are not used by default</remarks>
+         * <param name="useCookie">True for using cookie, false otherwise</param>
+         */
+        IFluentQuery<T> PagingCookie(bool useCookie = true);
+
+        /**
+         * <summary>
          * Specifies whether the total record count of your query results should be retrieved.
          * </summary>
          * <param name="returnTotalRecordCount">True for returning total record count, false otherwise.</param>
@@ -209,6 +219,8 @@ namespace Xrm.Oss.FluentQuery
     public class FluentQuery<T> : IFluentQuery<T>, IFluentQuerySetting<T> where T : Entity
     {
         private QueryExpression _query;
+        private bool _usePagingCookie;
+
         private IOrganizationService _service;
 
         public FluentQuery(string entityName, IOrganizationService service)
@@ -220,6 +232,7 @@ namespace Xrm.Oss.FluentQuery
             };
 
             _service = service;
+            _usePagingCookie = false;
         }
 
         public IFluentQuery<T> IncludeColumns(params string[] columns)
@@ -259,6 +272,13 @@ namespace Xrm.Oss.FluentQuery
             return this;
         }
 
+        public IFluentQuery<T> PagingCookie(bool useCookie = true)
+        {
+            _usePagingCookie = useCookie;
+
+            return this;
+        }
+
         public List<T> Retrieve()
         {
             return _service.RetrieveMultiple(_query).Entities.Select(e => e.ToEntity<T>())
@@ -279,7 +299,11 @@ namespace Xrm.Oss.FluentQuery
             do
             {
                 _query.PageInfo.PageNumber = pageNumber;
-                _query.PageInfo.PagingCookie = pagingCookie;
+
+                if (_usePagingCookie)
+                {
+                    _query.PageInfo.PagingCookie = pagingCookie;
+                }
 
                 var response = _service.RetrieveMultiple(_query);
                 var result = response.Entities.Select(e => e.ToEntity<T>())
@@ -288,6 +312,8 @@ namespace Xrm.Oss.FluentQuery
                 records.AddRange(result);
 
                 moreRecords = response.MoreRecords;
+                pagingCookie = response.PagingCookie;
+
                 pageNumber++;
             }
             while (moreRecords);
@@ -686,15 +712,15 @@ namespace Xrm.Oss.FluentQuery
          * </summary>
          * <param name="value">Single object, use object array overload if necessary.</param>
          */
-        IFluentConditionExpression Value(object value);
+        IFluentConditionExpression Value<T>(T value);
 
         /**
          * <summary>
          * Sets the values for the condition.
          * </summary>
-         * <param name="value">Object array, use object overload if necessary.</param>
+         * <param name="value">Object enumeration, use object overload if necessary.</param>
          */
-        IFluentConditionExpression Values(params object[] value);
+        IFluentConditionExpression Values<T>(IEnumerable<T> values);
 
         /**
          * <summary>
@@ -703,16 +729,16 @@ namespace Xrm.Oss.FluentQuery
          * </summary>
          * <param name="value">Single object, use object array overload if necessary.</param>
          */
-        IFluentConditionExpression To(object value);
+        IFluentConditionExpression To<T>(T value);
 
         /**
-         * <summary>
-         * Alias for Value, provides better readability on Equal conditions.
-         * Sets the values for the condition.
-         * </summary>
-         * <param name="value">Object array, use object overload if necessary.</param>
-         */
-        IFluentConditionExpression ToMany(params object[] value);
+        * <summary>
+        * Alias for Value, provides better readability on Equal conditions.
+        * Sets the values for the condition.
+        * </summary>
+        * <param name="value">Object enumeration, use object overload if necessary.</param>
+        */
+        IFluentConditionExpression ToMany<T>(IEnumerable<T> values);
     }
 
     public class FluentConditionExpression : IFluentConditionExpression
@@ -745,26 +771,29 @@ namespace Xrm.Oss.FluentQuery
             return this;
         }
 
-        public IFluentConditionExpression To(object value)
+        public IFluentConditionExpression To<T>(T value)
         {
             return Value(value);
         }
 
-        public IFluentConditionExpression ToMany(params object[] value)
+        public IFluentConditionExpression ToMany<T>(IEnumerable<T> values)
         {
-            return Values(value);
+            return Values(values);
         }
 
-        public IFluentConditionExpression Value(object value)
+        public IFluentConditionExpression Value<T>(T value)
         {
             _condition.Values.Add(value);
 
             return this;
         }
 
-        public IFluentConditionExpression Values(params object[] value)
+        public IFluentConditionExpression Values<T>(IEnumerable<T> values)
         {
-            _condition.Values.AddRange(value);
+            foreach (var value in values)
+            {
+                _condition.Values.Add(value);
+            }
 
             return this;
         }
