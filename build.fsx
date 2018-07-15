@@ -30,7 +30,7 @@ let packagesDir = @".\packages\"
 
 // version info
 let mutable majorversion    = "2"
-let mutable minorversion    = "0"
+let mutable minorversion    = "1"
 let mutable build           = "0"
 let mutable nugetVersion    = ""
 let mutable asmVersion      = ""
