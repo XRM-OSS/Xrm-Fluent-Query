@@ -12,6 +12,8 @@ licenseUrl
     https://github.com/DigitalFlow/Xrm-Fluent-Query/blob/master/LICENSE
 description
     A Dynamics CRM / Dynamics 365 library for fluent IOrganizationService queries
+frameworkAssemblies
+    System.Runtime.Caching
 files
     src\lib\Xrm.Oss.FluentQuery\FluentQuery.cs ==> contentFiles\cs\net452\lib
     src\lib\Xrm.Oss.FluentQuery\FluentQuery.cs ==> content

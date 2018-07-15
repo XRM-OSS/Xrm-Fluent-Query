@@ -1320,11 +1320,5 @@
       <ModuleName>System.Xml.Linq</ModuleName>
       <Classes />
     </Module>
-    <Module skippedDueTo="Filter" hash="B6-A3-82-E5-87-DE-B8-9D-E6-F2-21-7E-99-D0-D0-CA-9B-B6-1F-B3">
-      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\mscorlib.resources\v4.0_4.0.0.0_de_b77a5c561934e089\mscorlib.resources.dll</ModulePath>
-      <ModuleTime>2017-09-30T14:34:32.9580479Z</ModuleTime>
-      <ModuleName>mscorlib.resources</ModuleName>
-      <Classes />
-    </Module>
   </Modules>
 </CoverageSession>
