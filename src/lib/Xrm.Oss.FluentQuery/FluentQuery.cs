@@ -308,12 +308,10 @@ namespace Xrm.Oss.FluentQuery
             }
         }
 
-        public List<T> ReturnFromCache()
+        public List<T> ReturnFromCache(string key)
         {
             if (_cache != null)
             {
-                var key = GenerateQueryCacheKey(_query);
-
                 if (_cache.Contains(key))
                 {
                     return _cache.Get(key) as List<T>;
@@ -323,19 +321,18 @@ namespace Xrm.Oss.FluentQuery
             return null;
         }
 
-        public void SetCacheResult(List<T> result)
+        public void SetCacheResult(string key, List<T> result)
         {
             if (_cache != null)
             {
-                var key = GenerateQueryCacheKey(_query);
-
                 _cache.Set(key, result, _absoluteExpiration);
             }
         }
 
         public List<T> Retrieve()
         {
-            var cacheResult = ReturnFromCache();
+            var cacheKey = _cache != null ? GenerateQueryCacheKey(_query) : null;
+            var cacheResult = ReturnFromCache(cacheKey);
 
             if (cacheResult != null)
             {
@@ -345,14 +342,15 @@ namespace Xrm.Oss.FluentQuery
             var result = _service.RetrieveMultiple(_query).Entities.Select(e => e.ToEntity<T>())
                 .ToList();
 
-            SetCacheResult(result);
+            SetCacheResult(cacheKey, result);
 
             return result;
         }
 
         public List<T> RetrieveAll()
         {
-            var cacheResult = ReturnFromCache();
+            var cacheKey = _cache != null ? GenerateQueryCacheKey(_query) : null;
+            var cacheResult = ReturnFromCache(cacheKey);
 
             if (cacheResult != null)
             {
@@ -361,7 +359,8 @@ namespace Xrm.Oss.FluentQuery
 
             var records = new List<T>();
 
-            var previousPageNumber = _query.PageInfo.PageNumber;
+            // Default to 1 as first page number, otherwise the first page is retrieved twice (once while supplying 0 as page number and again when supplying 1)
+            var previousPageNumber = _query.PageInfo.PageNumber > 0 ? _query.PageInfo.PageNumber : 1;
             var previousPagingCookie = _query.PageInfo.PagingCookie;
 
             var moreRecords = false;
@@ -393,7 +392,7 @@ namespace Xrm.Oss.FluentQuery
             _query.PageInfo.PageNumber = previousPageNumber;
             _query.PageInfo.PagingCookie = previousPagingCookie;
 
-            SetCacheResult(records);
+            SetCacheResult(cacheKey, records);
 
             return records;
         }
