@@ -45,10 +45,10 @@ Target "Clean" (fun _ ->
 )
 
 Target "BuildVersions" (fun _ ->
-    asmVersion      <- majorversion + "." + minorversion + "." + build
+    asmVersion      <- majorversion + "." + minorversion + "." + patch
     asmInfoVersion  <- asmVersion + " - " + sha
 
-    let nugetBuildNumber = if not isLocalBuild then build else "0"
+    let nugetBuildNumber = if not isLocalBuild then patch else "0"
     
     nugetVersion    <- majorversion + "." + minorversion + "." + nugetBuildNumber
 
