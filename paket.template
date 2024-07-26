@@ -15,5 +15,5 @@ description
 frameworkAssemblies
     System.Runtime.Caching
 files
-    src\lib\Xrm.Oss.FluentQuery\FluentQuery.cs ==> contentFiles\cs\net452\lib
+    src\lib\Xrm.Oss.FluentQuery\FluentQuery.cs ==> contentFiles/cs/any/lib
     src\lib\Xrm.Oss.FluentQuery\FluentQuery.cs ==> content
